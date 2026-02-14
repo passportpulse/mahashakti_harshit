@@ -161,10 +161,10 @@ export default function ProductDetailPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Product Images */}
           <div className="space-y-4">
-            <div className="bg-white rounded-lg shadow-md p-8">
+            <div className="">
               <div className="relative">
                 <div 
-                  className="aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-zoom-in"
+                  className="aspect-square bg-gray-50 rounded-lg overflow-hidden cursor-zoom-in"
                   onMouseMove={handleMouseMove}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
@@ -172,7 +172,7 @@ export default function ProductDetailPage() {
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                     onError={(e) => {
                       e.currentTarget.src = '/api/placeholder/400/400';
                     }}

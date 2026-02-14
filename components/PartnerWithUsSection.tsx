@@ -83,14 +83,14 @@ export default function PartnerWithUsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="rounded-lg overflow-hidden shadow-lg">
             <img 
-              src="/gallery/WhatsApp-Image-2026-01-20-at-3.15.07-PM.png" 
+              src="/1.png" 
               alt="Partner with MAPL - Business Growth"
               className="w-full  object-cover"
             />
           </div>
           <div className="rounded-lg overflow-hidden shadow-lg">
             <img 
-              src="/gallery/WhatsApp-Image-2026-01-20-at-3.15.07-PM-1.png" 
+              src="/2.png" 
               alt="MAPL Partnership Opportunities"
               className="w-full  object-cover"
             />
