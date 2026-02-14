@@ -20,7 +20,7 @@ const categories: Category[] = [
     name: "Makhana",
     title: "Premium Foxnuts",
     description: "Protein-rich, roasted and flavored makhana perfect for healthy snacking.",
-    image: "/categories/makhana.jpeg",
+    image: "/categories/makhana.png",
     bgColor: "from-green-600 to-emerald-500",
     link: "/shop?category=makhana"
   },
@@ -29,7 +29,7 @@ const categories: Category[] = [
     name: "Mustard Oil",
     title: "Cold Pressed Mustard Oil",
     description: "Pure, chemical-free mustard oil extracted using traditional methods.",
-    image: "/categories/mustard-oil.jpeg",
+    image: "/categories/mustard-oil.png",
     bgColor: "from-yellow-500 to-orange-500",
     link: "/shop?category=mustard-oil"
   },
@@ -38,7 +38,7 @@ const categories: Category[] = [
     name: "Dry Fruits",
     title: "Organic Dry Fruits",
     description: "Handpicked premium dry fruits packed with natural nutrients and freshness.",
-    image: "/categories/dry-fruits.jpeg",
+    image: "/categories/dry-fruits.png",
     bgColor: "from-orange-500 to-red-500",
     link: "/shop?category=dry-fruits"
   },
