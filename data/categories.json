@@ -1,0 +1,6 @@
+[
+  { "name": "All Categories", "slug": "/categories" },
+  { "name": "Makhana", "slug": "/products/makhana" },
+  { "name": "Dry Fruits", "slug": "/products/dry-fruits" },
+  { "name": "Mustard Oil", "slug": "/products/mustard-oil" }
+]

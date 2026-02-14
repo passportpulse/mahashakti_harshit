@@ -1,0 +1,30 @@
+import Image from "next/image";
+import Link from "next/link";
+import HeroSlider from "@/components/HeroSlider";
+import PopularCategories from "@/components/PopularCategories";
+import ProductDisplaySection from "@/components/ProductDisplaySection";
+import PartnerWithUsSection from "@/components/PartnerWithUsSection";
+import ProductGridSection from "@/components/ProductGridSection";
+
+export default function Home() {
+  return (
+    <div className="bg-zinc-50 font-sans dark:bg-black">
+      {/* Hero Slider */}
+      <HeroSlider />
+
+      {/* Popular Categories Section */}
+      <PopularCategories />
+
+      {/* Product Display Section */}
+      <ProductDisplaySection />
+
+      {/* Partner With Us Section */}
+      <PartnerWithUsSection />
+
+      {/* Product Grid Section */}
+      <ProductGridSection />
+
+ 
+    </div>
+  );
+}

@@ -1,0 +1,161 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Besan",
+      "slug": "besan",
+      "description": "Premium quality gram flour for all your cooking needs",
+      "image": "/categories/besan.jpeg",
+      "products": [
+        {
+          "id": 1,
+          "name": "MAPL Premium Besan | High Quality Gram Flour for Cooking & Sweets",
+          "slug": "mapl-premium-besan",
+          "category": "Besan",
+          "description": "MAPL Premium Besan (Gram Flour) is a finely milled, high-quality flour made from carefully selected chana dal to ensure superior taste, texture, and purity. Processed under strict quality control and hygienic conditions by Mahashakti Agro Products Pvt. Ltd., our besan delivers consistent freshness and rich aroma in every pack. Ideal for traditional Indian dishes like pakoras, sweets, kadhi, and savory snacks, MAPL Besan is rich in protein, gluten-free, and packed with natural nutrients. Suitable for household kitchens, restaurants, and bulk commercial use, it is available in secure packaging to maintain long-lasting freshness and quality.",
+          "unit": "kg",
+          "image": "/products/premium-besan.jpeg",
+          "features": [
+            "Fine Texture",
+            "High Purity",
+            "Traditional Grinding",
+            "No Additives"
+          ],
+          "inStock": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dry Fruits",
+      "slug": "dry-fruits",
+      "description": "Handpicked natural dry fruits from trusted sources",
+      "image": "/categories/dry-fruits.jpeg",
+      "products": [
+        {
+          "id": 2,
+          "name": "MAPL Dry Dates | Natural Chuhara Dry Fruits | Mahashakti Agro Products",
+          "slug": "mapl-dry-dates",
+          "description": "MAPL Dry Dates (Chuhara) are premium-quality, naturally dried dates known for their rich sweetness, chewy texture, and high nutritional value. Sourced from trusted farms and hygienically packed by Mahashakti Agro Products Pvt. Ltd., these dry dates deliver purity, taste, and health in every bite. Dry dates are a rich source of natural energy, fiber, essential minerals, and antioxidants, making them an ideal addition to a healthy diet. MAPL Dry Dates are widely used for daily consumption, traditional recipes, desserts, milk preparations, and festive offerings. Perfect for customers searching for dry dates, chuhara dry fruits, and natural healthy snacks, MAPL ensures consistent quality, freshness, and authentic taste.",
+          "unit": "kg",
+          "image": "/products/dry-dates.jpeg",
+          "features": [
+            "Natural Sweetness",
+            "High Energy",
+            "Rich in Fiber",
+            "Premium Quality"
+          ],
+          "inStock": true
+        },
+        {
+          "id": 3,
+          "name": "MAPL Premium Cashews | Handpicked Natural Cashew Nuts | Mahashakti Agro",
+          "slug": "mapl-premium-cashews",
+          "description": "MAPL Premium Cashews are carefully handpicked and processed to deliver superior quality, rich taste, and natural freshness. Brought to you by Mahashakti Agro Products Pvt. Ltd., these premium cashew nuts are sourced from trusted farms and hygienically packed to preserve flavor and crunch. Available in multiple variants such as plain cashews, roasted cashews, flavored cashews, and specialty coatings, MAPL Cashews are ideal for healthy snacking, cooking, gifting, and commercial use. Their smooth texture, consistent size, and premium appearance make them suitable for both retail and bulk buyers. Perfect for customers searching for premium cashew nuts, healthy dry fruits, and trusted cashew suppliers in India, MAPL ensures quality you can taste in every bite.s",
+          "unit": "kg",
+          "image": "/products/premium-cashews.jpeg",
+          "features": [
+            "Handpicked",
+            "Natural",
+            "Premium Quality",
+            "Rich in Nutrients"
+          ],
+          "inStock": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Makhana",
+      "slug": "makhana",
+      "description": "High protein healthy snacks for modern lifestyle",
+      "image": "/categories/makhana.jpeg",
+      "products": [
+        {
+          "id": 4,
+          "name": "MAPL Roasted Makhana | High Protein, Gluten Free Healthy Snacks",
+          "slug": "mapl-roasted-makhana-gluten-free",
+          "description": "MAPL Roasted Makhana is a premium range of healthy roasted fox nuts (lotus seeds) designed for modern, health-conscious consumers. Carefully roasted and seasoned, these makhanas offer a light, crunchy texture with delicious flavors—without deep frying. Packed by Mahashakti Agro Products Pvt. Ltd., MAPL Makhana is high in protein, low in fat, and completely gluten-free, making it an ideal snack for fitness enthusiasts, office snacking, kids, and anyone seeking a nutritious alternative to fried snacks. Available in convenient pouch packaging, MAPL Roasted Makhana ensures freshness, taste, and quality in every bite.",
+          "unit": "kg",
+          "image": "/products/roasted-makhana.jpeg",
+          "features": [
+            "High Protein",
+            "Gluten Free",
+            "Low Calorie",
+            "Heart Healthy"
+          ],
+          "inStock": true
+        },
+        {
+          "id": 5,
+          "name": "MAPL Roasted Makhana | High Protein Healthy Snacks | Gluten Free",
+          "slug": "mapl-premium-makhana",
+          "description": "MAPL Roasted Makhana is a premium range of healthy, roasted fox nuts (lotus seeds) crafted for modern, health-conscious consumers. Produced by Mahashakti Agro Products Pvt. Ltd., these makhanas are roasted to perfection and seasoned with delicious natural flavors to deliver taste without compromising nutrition. Rich in protein, low in fat, and gluten-free, MAPL Makhana is an ideal alternative to fried snacks. Perfect for office snacking, fitness diets, kids, and all age groups, these crunchy snacks support a healthy lifestyle while satisfying cravings. Available in multiple exciting flavors, MAPL Roasted Makhana is a top choice for customers searching for healthy snacks, protein snacks, and premium makhana brands in India.",
+          "unit": "kg",
+          "image": "/products/premium-makhana.jpeg",
+          "features": [
+            "Premium Quality",
+            "Crunchy Texture",
+            "Natural Taste",
+            "Rich in Protein"
+          ],
+          "inStock": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Mustard Oil",
+      "slug": "mustard-oil",
+      "description": "Pure and natural mustard oil for healthy cooking",
+      "image": "/categories/mustard-oil.jpeg",
+      "products": [
+        {
+          "id": 6,
+          "name": "MAPL Kachchi Ghani Mustard Oil | Cold Pressed Pure Mustard Oil | Traditional Extraction Method",
+          "slug": "mapl-kachchi-ghani-mustard-oil",
+          "description": "MAPL Kachchi Ghani Mustard Oil is a premium cold-pressed mustard oil, extracted using traditional Kachchi Ghani methods to retain its natural aroma, rich flavor, and nutritional goodness. Manufactured by Mahashakti Agro Products Pvt. Ltd., this oil delivers purity you can trust for everyday cooking and traditional Indian recipes. Made from carefully selected mustard seeds, MAPL Kachchi Ghani Mustard Oil is 100% pure, chemical-free, and vegetarian, making it an excellent choice for health-conscious households and commercial kitchens. Its strong aroma and authentic taste make it especially ideal for Indian cooking, pickles, frying, and sautéing. Packed in bulk-friendly containers, this edible oil is suitable for homes, hotels, restaurants, caterers, and wholesalers seeking premium quality mustard oil.",
+          "unit": "liter",
+          "image": "/products/kachchi-ghani-oil.jpeg",
+          "features": [
+            "Cold Pressed",
+            "Traditional Method",
+            "Pure & Natural",
+            "Rich in Omega"
+          ],
+          "inStock": true
+        },
+        {
+          "id": 7,
+          "name": "MAPL Pure Mustard Oil | Natural & Healthy Cooking Oil from Trusted Partner",
+          "slug": "mapl-pure-mustard-oil",
+          "description": "MAPL Pure Mustard Oil is a premium-quality, 100% pure and natural mustard oil, crafted from carefully selected mustard seeds to retain its traditional pungency, rich aroma, and nutritional benefits. Produced by Mahashakti Agro Products Pvt. Ltd., MAPL Mustard Oil stands as a trusted partner for households, hotels, restaurants, and commercial kitchens. This mustard oil is widely used for healthy cooking, offering authentic flavor to Indian cuisines while maintaining purity and quality. Its natural properties make it suitable for daily use, frying, sautéing, and traditional food preparation. Packed hygienically in bulk-friendly containers, MAPL Mustard Oil ensures long-lasting freshness and consistent quality. Ideal for customers searching for pure mustard oil, natural cooking oil, and trusted edible oil brands, MAPL delivers quality you can rely on.",
+          "unit": "liter",
+          "image": "/products/pure-mustard-oil-premium.jpeg",
+          "features": [
+            "Trusted Partner",
+            "Natural Source",
+            "Healthy Cooking",
+            "Quality Assured"
+          ],
+          "inStock": true
+        },
+        {
+          "id": 8,
+          "name": "MAPL Mustard Oil – Pure & Natural No Cholesterol Mustard Oil",
+          "slug": "mapl-mustard-oil",
+          "description": "MAPL Mustard Oil is a premium-quality, 100% pure and natural mustard oil, carefully processed from high-grade mustard seeds to preserve its traditional aroma, rich flavor, and nutritional value. Manufactured by Mahashakti Agro Products Pvt. Ltd., this oil is designed for everyday healthy cooking and authentic Indian cuisine. This cholesterol-free mustard oil is rich in natural antioxidants and essential fatty acids, making it a healthy choice for frying, sautéing, and traditional recipes. Its strong pungent aroma enhances the taste of food while maintaining purity and freshness.MAPL Mustard Oil is ideal for households, restaurants, and commercial kitchens looking for pure mustard oil, healthy cooking oil, and trusted edible oil brands in India. Available in multiple pack sizes, it meets both domestic and bulk requirements.",
+          "unit": "liter",
+          "image": "/products/mustard-oil-premium.jpeg",
+          "features": [
+            "Trusted Partner",
+            "Natural Source",
+            "Healthy Cooking",
+            "Quality Assured"
+          ],
+          "inStock": true
+        }
+      ]
+    }
+  ]
+}
