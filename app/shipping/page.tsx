@@ -1,7 +1,27 @@
+"use client"
 import Link from 'next/link';
 import { ArrowLeft, Truck, Package, Clock } from 'lucide-react';
+import { useEffect } from 'react';
 
 export default function ShippingAndDeliveryPolicy() {
+  useEffect(() => {
+    // Add smooth scrolling behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Add scroll padding for anchor links
+    const style = document.createElement('style');
+    style.textContent = `
+      html {
+        scroll-padding-top: 100px;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.documentElement.style.scrollBehavior = '';
+      document.head.removeChild(style);
+    };
+  }, []);
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -20,47 +40,40 @@ export default function ShippingAndDeliveryPolicy() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Last Updated */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Main Content */}
+          <div className="flex-1">
+            {/* Navigation Bar */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
 
-          {/* Left Side - Breadcrumb */}
-          <div className="text-sm text-gray-500 mb-2 sm:mb-0">
-            <Link href="/" className="hover:text-green-600 transition-colors">
-              Home
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-gray-700 font-medium">Shipping Policy</span>
-          </div>
+              {/* Left Side - Breadcrumb */}
+              <div className="text-sm text-gray-500 mb-2 sm:mb-0">
+                <Link href="/" className="hover:text-green-600 transition-colors">
+                  Home
+                </Link>
+                <span className="mx-2">/</span>
+                <span className="text-gray-700 font-medium">Shipping Policy</span>
+              </div>
 
-          {/* Right Side - Last Updated */}
-          <p className="text-gray-500 text-sm">
-            <strong>Last Updated:</strong> January 1, 2026
-          </p>
+              {/* Right Side - Last Updated */}
+              <p className="text-gray-500 text-sm">
+                <strong>Last Updated:</strong> January 1, 2026
+              </p>
 
-        </div>
+            </div>
 
-        {/* Introduction */}
-        <div className="mb-8">
-          <div className="flex items-center mb-4">
-            <h2 className="text-2xl font-medium text-gray-700">Shipping Policy</h2>
-          </div>
-          <p className="text-gray-500 leading-relaxed mb-4">
-            MAHASHAKTI AGRO PRODUCTS PVT. LTD. strives to ensure safe, timely, and efficient delivery of all orders. Order processing begins only after confirmation of order details, availability of stock, and receipt of payment or agreed commercial terms.
-
-          </p>
-          <p className="text-gray-500 leading-relaxed mb-4">
-            Domestic shipments are executed through trusted courier services or transport partners. Delivery timelines may vary depending on the destination, order volume, and logistical conditions.
-          </p>
-          <p className="text-gray-500 leading-relaxed  mb-4">
-            For export shipments, delivery timelines depend on international freight schedules, port operations, customs clearance, regulatory approvals, and destination country import regulations. The company shall not be responsible for delays caused by customs authorities, port congestion, strikes, natural disasters, or other events beyond reasonable control.
-          </p>
-          <p className="text-gray-500 leading-relaxed">
-            Customers are responsible for providing accurate delivery information. Any additional costs arising due to incorrect details or failed deliveries shall be borne by the customer.
-          </p>
-        </div>
+            {/* Introduction */}
+            <div className="mb-8">
+              <div className="flex items-center mb-4">
+                <h2 className="text-2xl font-medium text-gray-700">Shipping Policy</h2>
+              </div>
+              <p className="text-gray-500 leading-relaxed mb-4">
+                MAHASHAKTI AGRO PRODUCTS PVT. LTD. strives to ensure safe, timely, and efficient delivery of all orders. Order processing begins only after confirmation of order details, availability of stock, and receipt of payment or agreed commercial terms.
+              </p>
+            </div>
 
         {/* Domestic Shipping */}
-        <div className="mb-8">
+        <div className="mb-8" id="domestic-shipping">
           <div className="flex items-center mb-4">
             <h2 className="text-2xl font-medium text-gray-700">Domestic Shipping</h2>
           </div>
@@ -79,7 +92,7 @@ export default function ShippingAndDeliveryPolicy() {
         </div>
 
         {/* International Shipping */}
-        <div className="mb-8">
+        <div className="mb-8" id="international-shipping">
           <div className="flex items-center mb-4">
             <h2 className="text-2xl font-medium text-gray-700">International Shipping</h2>
           </div>
@@ -98,7 +111,7 @@ export default function ShippingAndDeliveryPolicy() {
         </div>
 
         {/* Processing Time */}
-        <div className="mb-8">
+        <div className="mb-8" id="processing-time">
           <div className="flex items-center mb-4">
             <h2 className="text-2xl font-medium text-gray-700">Order Processing Time</h2>
           </div>
@@ -117,7 +130,7 @@ export default function ShippingAndDeliveryPolicy() {
         </div>
 
         {/* Shipping Charges */}
-        <div className="mb-8">
+        <div className="mb-8" id="shipping-charges">
           <div className="flex items-center mb-4">
             <h2 className="text-2xl font-medium text-gray-700">Shipping Charges</h2>
           </div>
@@ -174,7 +187,7 @@ export default function ShippingAndDeliveryPolicy() {
         </div>
 
         {/* Order Tracking */}
-        <div className="mb-8">
+        <div className="mb-8" id="order-tracking">
           <div className="flex items-center mb-4">
             <h2 className="text-2xl font-medium text-gray-700">Order Tracking</h2>
           </div>
@@ -249,13 +262,41 @@ export default function ShippingAndDeliveryPolicy() {
           </div>
         </div>
 
-        
+        </div>
 
-      
-
-
+          {/* Sticky Sidebar */}
+        <div className="lg:w-80 lg:sticky lg:top-10 lg:h-fit">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h2 className="text-2xl font-bold text-gray-700 mb-4">
+              Shipping Policy
+            </h2>
+            <p className="text-gray-500 text-sm mb-6">
+              Timely and safe delivery of your agro products
+            </p>
+            
+            {/* Quick Links */}
+            <div className="space-y-2">
+              <h3 className="font-semibold text-gray-900 mb-3">Quick Links</h3>
+              <a href="#domestic-shipping" className="block text-green-600 hover:text-green-700 text-sm py-1">
+                Domestic Shipping
+              </a>
+              <a href="#international-shipping" className="block text-green-600 hover:text-green-700 text-sm py-1">
+                International Shipping
+              </a>
+              <a href="#processing-time" className="block text-green-600 hover:text-green-700 text-sm py-1">
+                Order Processing Time
+              </a>
+              <a href="#shipping-charges" className="block text-green-600 hover:text-green-700 text-sm py-1">
+                Shipping Charges
+              </a>
+              <a href="#order-tracking" className="block text-green-600 hover:text-green-700 text-sm py-1">
+                Order Tracking
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
       </div>
     </div>
   );
 }
-

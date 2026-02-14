@@ -1,7 +1,27 @@
+"use client"
 import Link from 'next/link';
 import { ArrowLeft, FileText, Shield, Users } from 'lucide-react';
+import { useEffect } from 'react';
 
 export default function TermsAndConditions() {
+  useEffect(() => {
+    // Add smooth scrolling behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Add scroll padding for anchor links
+    const style = document.createElement('style');
+    style.textContent = `
+      html {
+        scroll-padding-top: 100px;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.documentElement.style.scrollBehavior = '';
+      document.head.removeChild(style);
+    };
+  }, []);
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -20,24 +40,27 @@ export default function TermsAndConditions() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Last Updated */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Main Content */}
+          <div className="flex-1">
+            {/* Navigation Bar */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
 
-          {/* Left Side - Breadcrumb */}
-          <div className="text-sm text-gray-500 mb-2 sm:mb-0">
-            <Link href="/" className="hover:text-green-600 transition-colors">
-              Home
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-gray-700 font-medium">Terms Policy</span>
-          </div>
+              {/* Left Side - Breadcrumb */}
+              <div className="text-sm text-gray-500 mb-2 sm:mb-0">
+                <Link href="/" className="hover:text-green-600 transition-colors">
+                  Home
+                </Link>
+                <span className="mx-2">/</span>
+                <span className="text-gray-700 font-medium">Terms Policy</span>
+              </div>
 
-          {/* Right Side - Last Updated */}
-          <p className="text-gray-500 text-sm">
-            <strong>Last Updated:</strong> January 1, 2026
-          </p>
+              {/* Right Side - Last Updated */}
+              <p className="text-gray-500 text-sm">
+                <strong>Last Updated:</strong> January 1, 2026
+              </p>
 
-        </div>
+            </div>
 
         {/* Introduction */}
         <div className="mb-8">
@@ -256,9 +279,40 @@ export default function TermsAndConditions() {
           </div>
         </div>
 
-        
+        </div>
 
-       
+          {/* Sticky Sidebar */}
+          <div className="lg:w-80 lg:sticky lg:top-10 lg:h-fit">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold text-gray-700 mb-4">
+                Terms of Service
+              </h2>
+              <p className="text-gray-500 text-sm mb-6">
+                Terms and conditions for website usage
+              </p>
+              
+              {/* Quick Links */}
+              <div className="space-y-2">
+                <h3 className="font-semibold text-gray-900 mb-3">Quick Links</h3>
+                <a href="#use-website" className="block text-green-600 hover:text-green-700 text-sm py-1">
+                  Use of Website
+                </a>
+                <a href="#product-information" className="block text-green-600 hover:text-green-700 text-sm py-1">
+                  Product Information
+                </a>
+                <a href="#orders-payment" className="block text-green-600 hover:text-green-700 text-sm py-1">
+                  Orders and Payment
+                </a>
+                <a href="#intellectual-property" className="block text-green-600 hover:text-green-700 text-sm py-1">
+                  Intellectual Property
+                </a>
+                <a href="#limitation-liability" className="block text-green-600 hover:text-green-700 text-sm py-1">
+                  Limitation of Liability
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
