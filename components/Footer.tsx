@@ -6,10 +6,10 @@ export default function Footer() {
   return (
     <footer className="bg-red-600 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex justify-between items-start gap-10">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-10">
           
           {/* Column 1: Contact Information */}
-          <div className='w-[40%]'>
+          <div className='w-full lg:w-[40%]'>
             {/* Logo */}
             <div className="mb-6">
               <Image
@@ -29,17 +29,17 @@ export default function Footer() {
             {/* Contact Details */}
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <MapPin className="h-4 w-4 text-red-200" />
+                <MapPin className="h-4 w-4 text-red-200 flex-shrink-0" />
                 <span className="text-red-100 text-sm">Office No. 1B, Annex Building 2, B.T.M. Sarani, Kolkata - 700001</span>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="h-4 w-4 text-red-200" />
+                <Mail className="h-4 w-4 text-red-200 flex-shrink-0" />
                 <a href="mailto:dey.Surajit.Kolkata@gmail.com" className="text-red-100 text-sm hover:text-white transition-colors">
                   dey.Surajit.Kolkata@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-red-200" />
+                <Phone className="h-4 w-4 text-red-200 flex-shrink-0" />
                 <a href="tel:+916290984501" className="text-red-100 text-sm hover:text-white transition-colors">
                   +916290984501
                 </a>
@@ -47,7 +47,7 @@ export default function Footer() {
             </div>
            
           </div>
-<div className="flex justify-between items-start gap-10 w-[40%]">
+<div className="flex flex-col sm:flex-row justify-between items-start gap-8 sm:gap-10 w-full lg:w-[40%]">
           {/* Column 2 */}
           <div>
             <h3 className="text-lg font-semibold mb-6">OUR STORES</h3>
@@ -85,12 +85,12 @@ export default function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className="max-w-7xl mx-auto flex justify-between items-center border-t border-red-700 py-6">
-        <div className=" px-4 text-center text-sm text-red-100">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center border-t border-red-700 py-6 px-4 sm:px-6 lg:px-8">
+        <div className="text-center text-sm text-red-100 mb-4 sm:mb-0">
           © 2026 MAHASHAKTI AGRO PRODUCTS PVT. LTD. All Rights Reserved.
         </div>
-        <div>
-          <img src="/footer/payments.png" alt="payments methods" className="w-full" />
+        <div className="w-full sm:w-auto">
+          <img src="/footer/payments.png" alt="payments methods" className="w-full max-w-xs mx-auto sm:mx-0" />
         </div>
       </div>
     </footer>

@@ -175,7 +175,7 @@ All personal data is stored securely and accessed only by authorized personnel. 
         </div>
 
           {/* Sticky Sidebar */}
-          <div className="lg:w-80 lg:sticky lg:top-10 lg:h-fit">
+          <div className="hidden lg:block lg:w-80 lg:sticky lg:top-10 lg:h-fit">
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-2xl font-bold text-gray-700 mb-4">
                 Privacy Policy
