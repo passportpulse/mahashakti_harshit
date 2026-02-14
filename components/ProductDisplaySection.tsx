@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ShoppingCart, Heart, Star, Tag, TrendingUp, Sparkles } from 'lucide-react';
+import { ShoppingCart, Heart, Star, Tag, TrendingUp, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
 
 // Import products data from JSON
 import productsData from '@/data/products.json';
@@ -47,6 +47,7 @@ const allProducts = getAllProducts();
 
 export default function ProductDisplaySection() {
   const [activeTab, setActiveTab] = useState<'discounts' | 'new' | 'topsellers'>('discounts');
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
   const getProducts = () => {
     switch (activeTab) {
@@ -169,42 +170,113 @@ export default function ProductDisplaySection() {
           </p>
         </div>
 
-        {/* Tabs */}
-        <div className="flex justify-start mb-8">
-          <div className="inline-flex p-1">
-            <button
-              onClick={() => setActiveTab('discounts')}
-              className={`px-6 py-3 text-sm rounded-md font-medium transition-all duration-200 flex items-center space-x-2 ${
-                activeTab === 'discounts'
-                  ? 'bg-white text-green-600 shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              <Tag className="h-4 w-4" />
-              <span>DISCOUNTS AND PROMOTIONS</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('new')}
-              className={`px-6 py-3 text-sm rounded-md font-medium transition-all duration-200 flex items-center space-x-2 ${
-                activeTab === 'new'
-                  ? 'bg-white  text-green-600 shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              <Sparkles className="h-4 w-4" />
-              <span>NEW PRODUCTS</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('topsellers')}
-              className={`px-6 py-3 text-sm rounded-md font-medium transition-all duration-200 flex items-center space-x-2 ${
-                activeTab === 'topsellers'
-                  ? 'bg-white text-green-600 shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              <TrendingUp className="h-4 w-4" />
-              <span>TOP SELLERS</span>
-            </button>
+        {/* Tabs - Desktop and Mobile */}
+        <div className="mb-8">
+          {/* Desktop Tabs */}
+          <div className="hidden md:flex justify-start">
+            <div className="inline-flex p-1">
+              <button
+                onClick={() => setActiveTab('discounts')}
+                className={`px-6 py-3 text-sm rounded-md font-medium transition-all duration-200 flex items-center space-x-2 ${
+                  activeTab === 'discounts'
+                    ? 'bg-white text-green-600 shadow-sm'
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                <Tag className="h-4 w-4" />
+                <span>DISCOUNTS AND PROMOTIONS</span>
+              </button>
+              <button
+                onClick={() => setActiveTab('new')}
+                className={`px-6 py-3 text-sm rounded-md font-medium transition-all duration-200 flex items-center space-x-2 ${
+                  activeTab === 'new'
+                    ? 'bg-white  text-green-600 shadow-sm'
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                <Sparkles className="h-4 w-4" />
+                <span>NEW PRODUCTS</span>
+              </button>
+              <button
+                onClick={() => setActiveTab('topsellers')}
+                className={`px-6 py-3 text-sm rounded-md font-medium transition-all duration-200 flex items-center space-x-2 ${
+                  activeTab === 'topsellers'
+                    ? 'bg-white text-green-600 shadow-sm'
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                <TrendingUp className="h-4 w-4" />
+                <span>TOP SELLERS</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Dropdown */}
+          <div className="md:hidden">
+            <div className="relative">
+              <button
+                onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+                className="w-full bg-white border border-gray-200 rounded-lg p-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+              >
+                <div className="flex items-center space-x-2">
+                  {activeTab === 'discounts' && <Tag className="h-4 w-4 text-green-600" />}
+                  {activeTab === 'new' && <Sparkles className="h-4 w-4 text-green-600" />}
+                  {activeTab === 'topsellers' && <TrendingUp className="h-4 w-4 text-green-600" />}
+                  <span className="font-medium text-gray-900">
+                    {activeTab === 'discounts' && 'DISCOUNTS AND PROMOTIONS'}
+                    {activeTab === 'new' && 'NEW PRODUCTS'}
+                    {activeTab === 'topsellers' && 'TOP SELLERS'}
+                  </span>
+                </div>
+                {isMobileDropdownOpen ? (
+                  <ChevronUp className="h-5 w-5 text-gray-600" />
+                ) : (
+                  <ChevronDown className="h-5 w-5 text-gray-600" />
+                )}
+              </button>
+
+              {/* Dropdown Menu */}
+              {isMobileDropdownOpen && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                  <button
+                    onClick={() => {
+                      setActiveTab('discounts');
+                      setIsMobileDropdownOpen(false);
+                    }}
+                    className={`w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-gray-50 transition-colors ${
+                      activeTab === 'discounts' ? 'bg-green-50 text-green-600' : 'text-gray-700'
+                    }`}
+                  >
+                    <Tag className="h-4 w-4" />
+                    <span>DISCOUNTS AND PROMOTIONS</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      setActiveTab('new');
+                      setIsMobileDropdownOpen(false);
+                    }}
+                    className={`w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-gray-50 transition-colors ${
+                      activeTab === 'new' ? 'bg-green-50 text-green-600' : 'text-gray-700'
+                    }`}
+                  >
+                    <Sparkles className="h-4 w-4" />
+                    <span>NEW PRODUCTS</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      setActiveTab('topsellers');
+                      setIsMobileDropdownOpen(false);
+                    }}
+                    className={`w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-gray-50 transition-colors ${
+                      activeTab === 'topsellers' ? 'bg-green-50 text-green-600' : 'text-gray-700'
+                    }`}
+                  >
+                    <TrendingUp className="h-4 w-4" />
+                    <span>TOP SELLERS</span>
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 

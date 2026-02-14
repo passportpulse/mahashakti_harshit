@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ShoppingCart, Heart, Star, Tag, Sparkles, Crown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ShoppingCart, Heart, Star, Tag, Sparkles, Crown, ChevronLeft, ChevronRight, ChevronDown, ChevronUp } from 'lucide-react';
 
 // Import products data from JSON
 import productsData from '@/data/products.json';
@@ -73,6 +73,7 @@ const featuredProducts = getProductsByCategory('featured');
 export default function ProductGridSection() {
   const [activeTab, setActiveTab] = useState<'offers' | 'new' | 'featured'>('offers');
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
   const getProducts = () => {
     switch (activeTab) {
@@ -210,10 +211,11 @@ export default function ProductGridSection() {
           </p>
         </div>
 
-        {/* Tabs with Navigation */}
+        {/* Tabs with Navigation - Desktop and Mobile */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex-1">
-            <div className="inline-flex rounded-lg border border-gray-200 bg-gray-50 p-1">
+            {/* Desktop Tabs */}
+            <div className="hidden md:inline-flex rounded-lg border border-gray-200 bg-gray-50 p-1">
               <button
                 onClick={() => {
                   setActiveTab('offers');
@@ -256,6 +258,77 @@ export default function ProductGridSection() {
                 <Crown className="h-4 w-4" />
                 <span>FEATURED</span>
               </button>
+            </div>
+
+            {/* Mobile Dropdown */}
+            <div className="md:hidden">
+              <div className="relative">
+                <button
+                  onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+                  className="w-full bg-white border border-gray-200 rounded-lg p-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                >
+                  <div className="flex items-center space-x-2">
+                    {activeTab === 'offers' && <Tag className="h-4 w-4 text-green-600" />}
+                    {activeTab === 'new' && <Sparkles className="h-4 w-4 text-green-600" />}
+                    {activeTab === 'featured' && <Crown className="h-4 w-4 text-green-600" />}
+                    <span className="font-medium text-gray-900">
+                      {activeTab === 'offers' && 'NEW OFFERS'}
+                      {activeTab === 'new' && 'NEW'}
+                      {activeTab === 'featured' && 'FEATURED'}
+                    </span>
+                  </div>
+                  {isMobileDropdownOpen ? (
+                    <ChevronUp className="h-5 w-5 text-gray-600" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 text-gray-600" />
+                  )}
+                </button>
+
+                {/* Dropdown Menu */}
+                {isMobileDropdownOpen && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                    <button
+                      onClick={() => {
+                        setActiveTab('offers');
+                        setCurrentSlide(0);
+                        setIsMobileDropdownOpen(false);
+                      }}
+                      className={`w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-gray-50 transition-colors ${
+                        activeTab === 'offers' ? 'bg-green-50 text-green-600' : 'text-gray-700'
+                      }`}
+                    >
+                      <Tag className="h-4 w-4" />
+                      <span>NEW OFFERS</span>
+                    </button>
+                    <button
+                      onClick={() => {
+                        setActiveTab('new');
+                        setCurrentSlide(0);
+                        setIsMobileDropdownOpen(false);
+                      }}
+                      className={`w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-gray-50 transition-colors ${
+                        activeTab === 'new' ? 'bg-green-50 text-green-600' : 'text-gray-700'
+                      }`}
+                    >
+                      <Sparkles className="h-4 w-4" />
+                      <span>NEW</span>
+                    </button>
+                    <button
+                      onClick={() => {
+                        setActiveTab('featured');
+                        setCurrentSlide(0);
+                        setIsMobileDropdownOpen(false);
+                      }}
+                      className={`w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-gray-50 transition-colors ${
+                        activeTab === 'featured' ? 'bg-green-50 text-green-600' : 'text-gray-700'
+                      }`}
+                    >
+                      <Crown className="h-4 w-4" />
+                      <span>FEATURED</span>
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
           
