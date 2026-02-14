@@ -44,32 +44,52 @@ export default function ContactPage() {
     <div className="bg-white">
 
       {/* HERO SECTION */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-6 flex justify-between gap-16 items-start">
+    <section className="bg-gradient-to-br from-green-50 to-white py-20">
+  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    
+    {/* Left Content */}
+    <div>
+      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+        Get in Touch with <span className="text-green-600">MAPL</span>
+      </h1>
 
-          {/* Left Content */}
-          <div>
-            <h1 className="text-4xl text-gray-700 font-semibold mb-6 tracking-tight">
-              Contact MAPL
-            </h1>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              We manufacture and export premium agro food products including Besan, Mustard Oil, and Makhana. 
-              Reach out to us for bulk orders, export inquiries, or business partnerships.
-            </p>
-        
-          </div>
+      <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-lg">
+        We manufacture and export premium agro food products including
+        <span className="font-semibold text-gray-800"> Makhana, Mustard Oil, Dry Fruits, and Aata</span>.
+        Contact us for bulk orders, export inquiries, or business partnerships.
+      </p>
 
-          {/* Right Image */}
-          <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
-            <Image
-              src="/contact-image.png"  // put your image in public folder
-              alt="MAPL Agro Products"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
+      {/* Buttons */}
+      {/* <div className="flex flex-wrap gap-4">
+        <a
+          href="/contact"
+          className="bg-green-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-700 transition-all duration-300 shadow-md hover:shadow-lg"
+        >
+          Contact Us
+        </a>
+
+        <a
+          href="/shop"
+          className="border border-green-600 text-green-600 px-8 py-3 rounded-xl font-semibold hover:bg-green-50 transition-all duration-300"
+        >
+          View Products
+        </a>
+      </div> */}
+    </div>
+
+    {/* Right Image */}
+    <div className="relative h-[350px] lg:h-[450px] w-full">
+      <Image
+        src="/categories/makhana.jpeg"
+        alt="MAPL Agro Products"
+        fill
+        className="object-contain drop-shadow-xl"
+      />
+    </div>
+
+  </div>
+</section>
+
 
       {/* FAQ + CONTACT FORM */}
       <section className="py-20">
