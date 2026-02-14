@@ -4,11 +4,9 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const slides = [
-  { id: 1, image: '/hero/4.png' },
-  { id: 2, image: '/hero/5.png' },
-  { id: 3, image: '/hero/6.jpeg' },
-  { id: 4, image: '/hero/7.jpeg' },
-  { id: 5, image: '/hero/8.jpeg' },
+  { id: 1, image: '/hero/7.png' },
+  { id: 2, image: '/hero/8.png' },
+  { id: 3, image: '/hero/6.png' },
 ];
 
 export default function HeroSlider() {
@@ -23,20 +21,21 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden">
+    <div className="relative w-full overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          className={`transition-opacity duration-1000 ${
+            index === currentSlide ? 'opacity-100' : 'opacity-0 absolute inset-0'
           }`}
         >
           <Image
             src={slide.image}
             alt="Hero Image"
-            fill
+            width={1920}
+            height={800}
+            className="w-full h-auto object-contain"
             priority={index === 0}
-            className="object-cover"
           />
         </div>
       ))}
