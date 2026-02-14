@@ -89,7 +89,7 @@ export default function CTASection() {
           <div className="relative">
             <div className="relative h-[400px] md:h-[500px] lg:h-[600px]">
               <Image
-                src="/cta/cta-image.png"
+                src="/cta-image.png"
                 alt="Premium Agro Products"
                 fill
                 className="object-cover rounded-lg shadow-2xl"
@@ -97,13 +97,7 @@ export default function CTASection() {
               />
               
               {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-green-600 rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">NEW</span>
-              </div>
-              
-              <div className="absolute -bottom-4 -left-4 bg-white px-4 py-2 rounded-lg shadow-lg">
-                <span className="text-green-600 font-bold">Free Shipping</span>
-              </div>
+          
             </div>
           </div>
         </div>
