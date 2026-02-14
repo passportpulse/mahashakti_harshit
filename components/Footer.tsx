@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Mail, Phone } from 'lucide-react';
+import { MapPin, Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -26,6 +26,45 @@ export default function Footer() {
               Get in touch with MAHASHAKTI AGRO PRODUCTS PVT. LTD. for product enquiries, bulk orders, import-export requirements, or business partnerships.
             </p>
             
+            {/* Social Media Icons */}
+            <div className="flex items-center gap-4 mb-6">
+              <a 
+                href="https://www.facebook.com/mahashaktiagroproduct/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-green-100 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://twitter.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-green-100 hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-green-100 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://youtube.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-green-100 hover:text-white transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="h-5 w-5" />
+              </a>
+            </div>
             {/* Contact Details */}
             <div className="space-y-3">
               <div className="flex items-center gap-3">
@@ -67,6 +106,7 @@ export default function Footer() {
               <li><Link href="/terms" className="text-green-100 hover:text-white">Terms & Conditions</Link></li>
               <li><Link href="/refund" className="text-green-100 hover:text-white">Refund Policy</Link></li>
               <li><Link href="/shipping" className="text-green-100 hover:text-white">Shipping Policy</Link></li>
+              
             </ul>
           </div>
 
