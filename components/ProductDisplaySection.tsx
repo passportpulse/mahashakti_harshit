@@ -23,6 +23,8 @@ interface Product {
   rating?: number;
   isNew?: boolean;
   isTopSeller?: boolean;
+  // Add our custom category field
+  productCategory?: 'discounts' | 'new' | 'topsellers';
 }
 
 // Get all products from categories and add mock pricing data
@@ -35,12 +37,27 @@ const getAllProducts = (): Product[] => {
       originalPrice: Math.floor(Math.random() * 700) + 400,
       discount: Math.floor(Math.random() * 30) + 10,
       rating: Number((Math.random() * 2 + 3).toFixed(1)),
-      // Randomly assign some products as new or top sellers
-      isNew: Math.random() > 0.7,
-      isTopSeller: Math.random() > 0.8
+      // Assign specific categories as requested
+      productCategory: getProductCategory(product.name)
     } as Product))
   );
   return products;
+};
+
+// Function to categorize products as requested
+const getProductCategory = (productName: string): 'discounts' | 'new' | 'topsellers' => {
+  if (productName.includes('MAPL Premium Besan') || 
+      productName.includes('MAPL Dry Dates') || 
+      productName.includes('MAPL Premium Cashews')) {
+    return 'discounts';
+  }
+  if (productName.includes('MAPL Kachchi Ghani Mustard Oil') || 
+      productName.includes('MAPL Pure Mustard Oil') ||
+      productName.includes('MAPL Roasted Makhana | High Protein')) {
+    return 'new';
+  }
+  // Remaining products go to top sellers
+  return 'topsellers';
 };
 
 const allProducts = getAllProducts();
@@ -52,11 +69,11 @@ export default function ProductDisplaySection() {
   const getProducts = () => {
     switch (activeTab) {
       case 'discounts':
-        return allProducts.filter(product => product.discount && product.discount > 15).slice(0, 4);
+        return allProducts.filter(product => product.productCategory === 'discounts').slice(0, 4);
       case 'new':
-        return allProducts.filter(product => product.isNew).slice(0, 4);
+        return allProducts.filter(product => product.productCategory === 'new').slice(0, 4);
       case 'topsellers':
-        return allProducts.filter(product => product.isTopSeller || (product.rating && product.rating >= 4.5)).slice(0, 4);
+        return allProducts.filter(product => product.productCategory === 'topsellers').slice(0, 4);
       default:
         return allProducts.slice(0, 4);
     }

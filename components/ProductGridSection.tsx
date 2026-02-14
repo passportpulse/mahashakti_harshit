@@ -39,18 +39,38 @@ const getAllProducts = (): Product[] => {
       originalPrice: Math.floor(Math.random() * 700) + 400,
       discount: Math.floor(Math.random() * 30) + 10,
       rating: Number((Math.random() * 2 + 3).toFixed(1)),
-      // Randomly assign some products as new, featured or offers
-      isNew: Math.random() > 0.7,
-      isFeatured: Math.random() > 0.8,
-      hasOffer: Math.random() > 0.6
+      // Assign specific categories as requested
+      productCategory: getProductCategory(product.name),
+      // Map to existing properties for compatibility
+      hasOffer: getProductCategory(product.name) === 'discounts',
+      isNew: getProductCategory(product.name) === 'new',
+      isFeatured: getProductCategory(product.name) === 'topsellers'
     } as unknown as Product))
   );
   return products;
 };
 
+// Function to categorize products as requested
+const getProductCategory = (productName: string): 'discounts' | 'new' | 'topsellers' => {
+  if (productName.includes('MAPL Premium Besan') || 
+      productName.includes('MAPL Dry Dates') || 
+      productName.includes('MAPL Premium Cashews')) {
+    return 'new'; // First product goes to New
+  }
+  if  (productName.includes('MAPL Kachchi Ghani Mustard Oil') || 
+      productName.includes('MAPL Pure Mustard Oil') ||
+      productName.includes('MAPL Roasted Makhana | High Protein')) {
+    return 'discounts'; // Next products go to New Offers
+  }
+  // Remaining products go to Featured (topsellers)
+  return 'topsellers';
+};
+
+
+
 const allProducts = getAllProducts();
 
-// Get 8 products for each category
+// Get all products for each category (no limit)
 const getProductsByCategory = (category: 'offers' | 'new' | 'featured') => {
   const filtered = allProducts.filter(product => {
     if (category === 'offers') return product.hasOffer;
@@ -59,12 +79,10 @@ const getProductsByCategory = (category: 'offers' | 'new' | 'featured') => {
     return true;
   });
   
-  // Ensure we have at least 8 products, if not fill with random products
-  const result = filtered.length >= 8 ? filtered.slice(0, 8) : 
-    [...filtered, ...allProducts.filter(p => !filtered.includes(p)).slice(0, 8 - filtered.length)];
-  
-  return result;
+  return filtered; // Return all available products
 };
+
+
 
 const newOffersProducts = getProductsByCategory('offers');
 const newProducts = getProductsByCategory('new');
@@ -72,7 +90,6 @@ const featuredProducts = getProductsByCategory('featured');
 
 export default function ProductGridSection() {
   const [activeTab, setActiveTab] = useState<'offers' | 'new' | 'featured'>('offers');
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
   const getProducts = () => {
@@ -89,20 +106,6 @@ export default function ProductGridSection() {
   };
 
   const products = getProducts();
-  const totalSlides = Math.ceil(products.length / 4); // 4 products visible per slide
-
-  const goToPrevious = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-
-  const goToNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-
-  const getVisibleProducts = () => {
-    const startIndex = currentSlide * 4;
-    return products.slice(startIndex, startIndex + 4);
-  };
 
   const renderStars = (rating: number) => {
     return (
@@ -149,11 +152,11 @@ export default function ProductGridSection() {
         )}
 
         {/* Discount Badge */}
-        {product.originalPrice && product.price && (
+        {/* {product.originalPrice && product.price && (
           <div className="absolute top-2 right-2 bg-orange-600 text-white px-2 py-1 rounded text-xs font-semibold">
             -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
           </div>
-        )}
+        )} */}
 
         {/* Quick Actions */}
         <div className="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -184,7 +187,7 @@ export default function ProductGridSection() {
         
         {/* Description */}
         <p className="text-xs text-gray-600 mb-3 line-clamp-2">{product.description}</p>
-/
+
 
         {/* Add to Cart Button */}
         <Link
@@ -219,7 +222,6 @@ export default function ProductGridSection() {
               <button
                 onClick={() => {
                   setActiveTab('offers');
-                  setCurrentSlide(0);
                 }}
                 className={`px-6 py-3 rounded-md font-medium transition-all duration-200 flex items-center space-x-2 ${
                   activeTab === 'offers'
@@ -233,7 +235,6 @@ export default function ProductGridSection() {
               <button
                 onClick={() => {
                   setActiveTab('new');
-                  setCurrentSlide(0);
                 }}
                 className={`px-6 py-3 rounded-md font-medium transition-all duration-200 flex items-center space-x-2 ${
                   activeTab === 'new'
@@ -247,7 +248,6 @@ export default function ProductGridSection() {
               <button
                 onClick={() => {
                   setActiveTab('featured');
-                  setCurrentSlide(0);
                 }}
                 className={`px-6 py-3 rounded-md font-medium transition-all duration-200 flex items-center space-x-2 ${
                   activeTab === 'featured'
@@ -290,7 +290,6 @@ export default function ProductGridSection() {
                     <button
                       onClick={() => {
                         setActiveTab('offers');
-                        setCurrentSlide(0);
                         setIsMobileDropdownOpen(false);
                       }}
                       className={`w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-gray-50 transition-colors ${
@@ -303,7 +302,6 @@ export default function ProductGridSection() {
                     <button
                       onClick={() => {
                         setActiveTab('new');
-                        setCurrentSlide(0);
                         setIsMobileDropdownOpen(false);
                       }}
                       className={`w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-gray-50 transition-colors ${
@@ -316,7 +314,6 @@ export default function ProductGridSection() {
                     <button
                       onClick={() => {
                         setActiveTab('featured');
-                        setCurrentSlide(0);
                         setIsMobileDropdownOpen(false);
                       }}
                       className={`w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-gray-50 transition-colors ${
@@ -331,49 +328,16 @@ export default function ProductGridSection() {
               </div>
             </div>
           </div>
-          
-          {/* Navigation Arrows */}
-          <div className="flex items-center space-x-2 ml-4">
-            <button
-              onClick={goToPrevious}
-              disabled={totalSlides <= 1}
-              className="p-2 rounded-full border border-gray-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
-              <ChevronLeft className="h-5 w-5 text-gray-600" />
-            </button>
-            <button
-              onClick={goToNext}
-              disabled={totalSlides <= 1}
-              className="p-2 rounded-full border border-gray-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
-              <ChevronRight className="h-5 w-5 text-gray-600" />
-            </button>
-          </div>
+</div>
+        {/* Products Grid - Show All Products */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
 
-        {/* Products Carousel */}
-        <div className="relative">
-          <div className="overflow-hidden">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {/* Create slides with 4 products each */}
-              {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-                <div key={slideIndex} className="min-w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-1">
-                  {products.slice(slideIndex * 4, (slideIndex + 1) * 4).map((product) => (
-                    <ProductCard key={product.id} product={product} />
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-          
-        
-        </div>
-
-     
       </div>
+  
     </section>
   );
 }

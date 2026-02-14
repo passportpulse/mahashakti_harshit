@@ -17,7 +17,7 @@ export default function Footer() {
                 alt="Mahashakti Logo"
                 width={180}
                 height={60}
-                className="object-contain"
+                className="object-contain brightness-0 invert"
               />
             </div>
             
