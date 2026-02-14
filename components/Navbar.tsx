@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, ShoppingCart, Menu, X, User } from 'lucide-react';
+import { Search, ShoppingCart, Menu, X, User, Heart } from 'lucide-react';
 import categories from '@/data/categories.json';
 
 export default function Navbar() {
@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="hidden sm:block bg-gray-50 border-b border-gray-200 py-2 text-sm text-gray-600">
+      {/* <div className="hidden sm:block bg-gray-50 border-b border-gray-200 py-2 text-sm text-gray-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <span className="flex items-center">
@@ -56,7 +56,7 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Header */}
       <div className="bg-white py-4 border-b border-gray-100">
@@ -107,6 +107,12 @@ export default function Navbar() {
             <Link href="/account" className="text-gray-600 hover:text-green-600 transition-colors">
               <User className="h-6 w-6" />
             </Link>
+            <Link href="/wishlist" className="text-gray-600 hover:text-green-600 transition-colors relative">
+              <Heart className="h-6 w-6" />
+              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                0
+              </span>
+            </Link>
             <Link href="/cart" className="text-gray-600 hover:text-green-600 transition-colors relative">
               <ShoppingCart className="h-6 w-6" />
               <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -127,7 +133,7 @@ export default function Navbar() {
 
       {/* Bottom Navigation - Sticky on Scroll */}
       <div
-        className={`hidden md:block bg-red-600 transition-all duration-300 ${
+        className={`hidden md:block bg-white transition-all duration-300 ${
           isSticky
             ? 'fixed top-0 left-0 w-full shadow-lg z-50'
             : ''
@@ -135,20 +141,25 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between">
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-white hover:text-red-200 transition-colors font-medium">
+            <Link href="/" className="text-gray-500 hover:text-green-600 transition-colors font-medium relative group">
               Home
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-900 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
             </Link>
-            <Link href="/about" className="text-white hover:text-red-200 transition-colors font-medium">
+            <Link href="/about" className="text-gray-500 hover:text-green-600 transition-colors font-medium relative group">
               About us
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-900 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
             </Link>
-            <Link href="/gallery" className="text-white hover:text-red-200 transition-colors font-medium">
+            <Link href="/gallery" className="text-gray-500 hover:text-green-600 transition-colors font-medium relative group">
               Gallery
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-900 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
             </Link>
-            <Link href="/shop" className="text-white hover:text-red-200 transition-colors font-medium">
+            <Link href="/shop" className="text-gray-500 hover:text-green-600 transition-colors font-medium relative group">
               Shop
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-900 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
             </Link>
-            <Link href="/contact" className="text-white hover:text-red-200 transition-colors font-medium">
+            <Link href="/contact" className="text-gray-500 hover:text-green-600 transition-colors font-medium relative group">
               Contact us
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-900 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
             </Link>
           </div>
           

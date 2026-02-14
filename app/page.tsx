@@ -5,6 +5,7 @@ import PopularCategories from "@/components/PopularCategories";
 import ProductDisplaySection from "@/components/ProductDisplaySection";
 import PartnerWithUsSection from "@/components/PartnerWithUsSection";
 import ProductGridSection from "@/components/ProductGridSection";
+import CTASection from "@/components/CTASection";
 
 export default function Home() {
   return (
@@ -12,11 +13,14 @@ export default function Home() {
       {/* Hero Slider */}
       <HeroSlider />
 
+      {/* Product Display Section */}
+      <ProductDisplaySection />
+
       {/* Popular Categories Section */}
       <PopularCategories />
 
-      {/* Product Display Section */}
-      <ProductDisplaySection />
+      {/* CTA Section */}
+      <CTASection />
 
       {/* Partner With Us Section */}
       <PartnerWithUsSection />
