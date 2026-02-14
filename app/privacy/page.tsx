@@ -4,180 +4,152 @@ import { ArrowLeft, Shield, Eye, Lock, Database } from 'lucide-react';
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center space-x-4">
-            <Link href="/" className="text-gray-600 hover:text-gray-900">
-              <ArrowLeft className="h-5 w-5" />
-            </Link>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Privacy Policy</h1>
-              <p className="text-gray-600 mt-1">Your privacy is important to us</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  {/* Hero Section */}
+<div className="bg-green-600 text-white py-16">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <h1 className="text-4xl md:text-5xl font-medium mb-4">
+      Privacy Policy
+    </h1>
+
+    <p className="text-lg text-green-100 max-w-2xl mx-auto">
+      Your privacy is important to us. Learn how MAHASHAKTI AGRO PRODUCTS PVT LTD (MAPL) 
+      collects, uses, and protects your information.
+    </p>
+
+  </div>
+</div>
+
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Last Updated */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
-          <p className="text-blue-800 text-sm">
-            <strong>Last Updated:</strong> January 1, 2024
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
+
+          {/* Left Side - Breadcrumb */}
+          <div className="text-sm text-gray-500 mb-2 sm:mb-0">
+            <Link href="/" className="hover:text-green-600 transition-colors">
+              Home
+            </Link>
+            <span className="mx-2">/</span>
+            <span className="text-gray-700 font-medium">Privacy Policy</span>
+          </div>
+
+          {/* Right Side - Last Updated */}
+          <p className="text-gray-500 text-sm">
+            <strong>Last Updated:</strong> January 1, 2026
           </p>
+
         </div>
 
         {/* Introduction */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div className=" mb-8">
           <div className="flex items-center mb-4">
-            <Shield className="h-8 w-8 text-green-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900">Introduction</h2>
+            <h2 className="text-2xl font-medium text-gray-700">Introduction</h2>
           </div>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            At MAHASHAKTI AGRO PRODUCTS PVT LTD (MAPL), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+          <p className="text-gray-500 leading-relaxed mb-4">
+              At MAHASHAKTI AGRO PRODUCTS PVT. LTD., safeguarding the privacy of our website visitors, customers, and business partners is of utmost importance to us. This Privacy Policy outlines how we collect, use, store, process, and protect personal and business-related information obtained through our website and business interactions.
+
           </p>
-          <p className="text-gray-600 leading-relaxed">
-            By using our website, you agree to the collection and use of information in accordance with this policy.
+          <p className="text-gray-500 leading-relaxed mb-4">
+          We may collect personal information such as name, contact number, email address, company details, location, enquiry details, and communication records when users voluntarily submit information through enquiry forms, email correspondence, phone calls, or other communication channels. This information is collected strictly for legitimate business purposes, including responding to enquiries, processing orders, managing import–export documentation, customer support, compliance with legal obligations, and improving our products and services.
+          </p>
+                <p className="text-gray-500 leading-relaxed mb-4">
+          
+All personal data is stored securely and accessed only by authorized personnel. We implement reasonable technical and organizational security measures to protect information against unauthorized access, misuse, alteration, disclosure, or destruction. We do not sell, lease, or trade personal information to third parties. However, information may be shared with logistics partners, regulatory authorities, customs agencies, payment processors, or service providers where required for order fulfillment, compliance with applicable laws, or operational efficiency.
+
+          </p>
+                <p className="text-gray-500 leading-relaxed">
+        By using our website or engaging with us, you consent to the collection and use of your information as described in this policy. We reserve the right to update this Privacy Policy periodically, and continued use of the website constitutes acceptance of such changes.
           </p>
         </div>
+   
+
+
 
         {/* Information We Collect */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div className=" mb-8">
           <div className="flex items-center mb-4">
-            <Database className="h-8 w-8 text-green-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900">Information We Collect</h2>
+            <h2 className="text-2xl font-medium text-gray-700">Information We Collect</h2>
           </div>
           
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Personal Information</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Name and contact details (email, phone number, address)</li>
-                <li>Account information (username, password)</li>
-                <li>Payment information (credit card details, billing address)</li>
-                <li>Shipping and delivery preferences</li>
-              </ul>
+              <h3 className="text-lg font-semibold text-gray-700 mb-3">Personal Information</h3>
+              <p className="text-gray-500 leading-relaxed">
+                We collect name and contact details including email, phone number, and address. 
+                We also gather account information such as username and password, 
+                payment information including credit card details and billing address, 
+                and shipping and delivery preferences.
+              </p>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Automatically Collected Information</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>IP address and browser type</li>
-                <li>Device information and operating system</li>
-                <li>Pages visited and time spent on our website</li>
-                <li>Cookies and similar tracking technologies</li>
-              </ul>
+              <h3 className="text-lg font-semibold text-gray-700 mb-3">Automatically Collected Information</h3>
+              <p className="text-gray-500 leading-relaxed">
+                We automatically collect IP address and browser type, device information and operating system, 
+                pages visited and time spent on our website, and cookies and similar tracking technologies.
+              </p>
             </div>
           </div>
         </div>
 
         {/* How We Use Your Information */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div className=" mb-8">
           <div className="flex items-center mb-4">
-            <Eye className="h-8 w-8 text-green-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900">How We Use Your Information</h2>
+            <h2 className="text-2xl font-medium text-gray-700">How We Use Your Information</h2>
           </div>
           
           <div className="space-y-4">
-            <p className="text-gray-600">We use your information to:</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 ml-6">
-              <li>Process and fulfill your orders</li>
-              <li>Provide customer support and assistance</li>
-              <li>Communicate with you about your orders</li>
-              <li>Improve our products and services</li>
-              <li>Send promotional offers and marketing communications</li>
-              <li>Comply with legal obligations</li>
-              <li>Prevent fraud and ensure security</li>
-            </ul>
+            <p className="text-gray-500">We use your information to process and fulfill your orders, provide customer support and assistance, communicate with you about your orders, improve our products and services, send promotional offers and marketing communications, comply with legal obligations, and prevent fraud and ensure security.</p>
           </div>
         </div>
 
         {/* Data Protection */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div className="b mb-8">
           <div className="flex items-center mb-4">
-            <Lock className="h-8 w-8 text-green-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900">Data Protection</h2>
+            <h2 className="text-2xl font-medium text-gray-700">Data Protection</h2>
           </div>
           
           <div className="space-y-4">
-            <p className="text-gray-600">We implement appropriate security measures to protect your information:</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 ml-6">
-              <li>SSL encryption for data transmission</li>
-              <li>Secure servers for data storage</li>
-              <li>Restricted access to personal information</li>
-              <li>Regular security audits and updates</li>
-              <li>Employee training on data protection</li>
-            </ul>
+            <p className="text-gray-500">We implement appropriate security measures to protect your information including SSL encryption for data transmission, secure servers for data storage, restricted access to personal information, regular security audits and updates, and employee training on data protection.</p>
           </div>
         </div>
 
         {/* Cookies */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Cookies and Tracking Technologies</h2>
+        <div className=" mb-8">
+          <h2 className="text-2xl font-medium text-gray-700 mb-4">Cookies and Tracking Technologies</h2>
           <div className="space-y-4">
-            <p className="text-gray-600">
-              We use cookies and similar tracking technologies to enhance your experience on our website:
+            <p className="text-gray-500">
+              We use cookies and similar tracking technologies to enhance your experience on our website including essential cookies for website functionality, performance cookies to analyze website usage, marketing cookies for personalized content, and social media cookies for sharing features.
             </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 ml-6">
-              <li>Essential cookies for website functionality</li>
-              <li>Performance cookies to analyze website usage</li>
-              <li>Marketing cookies for personalized content</li>
-              <li>Social media cookies for sharing features</li>
-            </ul>
-            <p className="text-gray-600">
+            <p className="text-gray-500">
               You can control cookie settings through your browser preferences.
             </p>
           </div>
         </div>
 
         {/* Third-Party Sharing */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Third-Party Sharing</h2>
+        <div className=" mb-8">
+          <h2 className="text-2xl font-medium text-gray-700 mb-4">Third-Party Sharing</h2>
           <div className="space-y-4">
-            <p className="text-gray-600">We may share your information with:</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 ml-6">
-              <li>Payment processors for transaction processing</li>
-              <li>Shipping companies for order fulfillment</li>
-              <li>Service providers for website operations</li>
-              <li>Legal authorities when required by law</li>
-            </ul>
-            <p className="text-gray-600">
+            <p className="text-gray-500">We may share your information with payment processors for transaction processing, shipping companies for order fulfillment, service providers for website operations, and legal authorities when required by law.</p>
+            <p className="text-gray-500">
               We do not sell or rent your personal information to third parties for marketing purposes.
             </p>
           </div>
         </div>
 
         {/* Your Rights */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Rights</h2>
+        <div className=" mb-8">
+          <h2 className="text-2xl font-medium text-gray-700 mb-4">Your Rights</h2>
           <div className="space-y-4">
-            <p className="text-gray-600">You have the right to:</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 ml-6">
-              <li>Access your personal information</li>
-              <li>Correct inaccurate information</li>
-              <li>Delete your account and data</li>
-              <li>Opt-out of marketing communications</li>
-              <li>Request data portability</li>
-              <li>Object to data processing</li>
-            </ul>
+            <p className="text-gray-500">You have the right to access your personal information, correct inaccurate information, delete your account and data, opt-out of marketing communications, request data portability, and object to data processing.</p>
           </div>
         </div>
 
-        {/* Contact Information */}
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
-          <div className="space-y-4">
-            <p className="text-gray-600">
-              If you have any questions about this Privacy Policy or our data practices, please contact us:
-            </p>
-            <div className="bg-gray-50 rounded-lg p-4">
-              <p className="text-gray-700"><strong>MAHASHAKTI AGRO PRODUCTS PVT LTD</strong></p>
-              <p className="text-gray-600">Office No. 1B, Annex Building 2, B.T.M. Sarani, Kolkata - 700001</p>
-              <p className="text-gray-600">Email: dey.Surajit.Kolkata@gmail.com</p>
-              <p className="text-gray-600">Phone: +916290984501</p>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   );

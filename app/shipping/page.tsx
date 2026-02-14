@@ -1,327 +1,261 @@
 import Link from 'next/link';
-import { ArrowLeft, Truck, Package, Clock, MapPin, CheckCircle, AlertCircle } from 'lucide-react';
+import { ArrowLeft, Truck, Package, Clock } from 'lucide-react';
 
 export default function ShippingAndDeliveryPolicy() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center space-x-4">
-            <Link href="/" className="text-gray-600 hover:text-gray-900">
-              <ArrowLeft className="h-5 w-5" />
-            </Link>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Shipping & Delivery Policy</h1>
-              <p className="text-gray-600 mt-1">How we deliver your orders safely and efficiently</p>
-            </div>
-          </div>
+      {/* Hero Section */}
+      <div className="bg-green-600 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+       
+
+          <h1 className="text-4xl md:text-5xl font-medium mb-4">
+            Shipping Policy
+          </h1>
+
+          <p className="text-lg text-green-100 max-w-2xl mx-auto">
+            Our shipping policy ensures timely and safe delivery of your agro products across India and internationally.
+          </p>
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Last Updated */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
-          <p className="text-blue-800 text-sm">
-            <strong>Last Updated:</strong> January 1, 2024
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
+
+          {/* Left Side - Breadcrumb */}
+          <div className="text-sm text-gray-500 mb-2 sm:mb-0">
+            <Link href="/" className="hover:text-green-600 transition-colors">
+              Home
+            </Link>
+            <span className="mx-2">/</span>
+            <span className="text-gray-700 font-medium">Shipping Policy</span>
+          </div>
+
+          {/* Right Side - Last Updated */}
+          <p className="text-gray-500 text-sm">
+            <strong>Last Updated:</strong> January 1, 2026
           </p>
+
         </div>
 
         {/* Introduction */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div className="mb-8">
           <div className="flex items-center mb-4">
-            <Truck className="h-8 w-8 text-green-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900">Our Shipping Commitment</h2>
+            <h2 className="text-2xl font-medium text-gray-700">Shipping Policy</h2>
           </div>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            At MAHASHAKTI AGRO PRODUCTS PVT LTD (MAPL), we are committed to delivering your orders safely, quickly, and efficiently. This policy outlines our shipping and delivery procedures.
+          <p className="text-gray-500 leading-relaxed mb-4">
+            MAHASHAKTI AGRO PRODUCTS PVT. LTD. strives to ensure safe, timely, and efficient delivery of all orders. Order processing begins only after confirmation of order details, availability of stock, and receipt of payment or agreed commercial terms.
+
           </p>
-          <p className="text-gray-600 leading-relaxed">
-            We strive to provide the best delivery experience while ensuring the quality and freshness of our products.
+          <p className="text-gray-500 leading-relaxed mb-4">
+            Domestic shipments are executed through trusted courier services or transport partners. Delivery timelines may vary depending on the destination, order volume, and logistical conditions.
+          </p>
+          <p className="text-gray-500 leading-relaxed  mb-4">
+            For export shipments, delivery timelines depend on international freight schedules, port operations, customs clearance, regulatory approvals, and destination country import regulations. The company shall not be responsible for delays caused by customs authorities, port congestion, strikes, natural disasters, or other events beyond reasonable control.
+          </p>
+          <p className="text-gray-500 leading-relaxed">
+            Customers are responsible for providing accurate delivery information. Any additional costs arising due to incorrect details or failed deliveries shall be borne by the customer.
           </p>
         </div>
 
-        {/* Delivery Areas */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        {/* Domestic Shipping */}
+        <div className="mb-8">
           <div className="flex items-center mb-4">
-            <MapPin className="h-8 w-8 text-green-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900">Delivery Areas</h2>
+            <h2 className="text-2xl font-medium text-gray-700">Domestic Shipping</h2>
           </div>
-          
-          <div className="space-y-6">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Serviceable Areas</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>All major cities across India</li>
-                <li>Kolkata and surrounding areas (2-3 days delivery)</li>
-                <li>Metropolitan cities (3-5 days delivery)</li>
-                <li>Rural and remote areas (5-7 days delivery)</li>
-              </ul>
-            </div>
-            
-            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Currently Not Serviceable</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>International destinations</li>
-                <li>Extreme remote locations</li>
-                <li>Areas with access restrictions</li>
-              </ul>
-            </div>
-          </div>
-        </div>
 
-        {/* Shipping Methods */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Shipping Methods</h2>
-          
-          <div className="space-y-6">
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Standard Shipping</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li><strong>Delivery Time:</strong> 3-7 business days</li>
-                <li><strong>Cost:</strong> ₹50 for orders below ₹500</li>
-                <li><strong>Free Shipping:</strong> Orders above ₹500</li>
-                <li><strong>Tracking:</strong> Available</li>
-              </ul>
-            </div>
-            
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Express Shipping</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li><strong>Delivery Time:</strong> 2-3 business days</li>
-                <li><strong>Cost:</strong> ₹120 for all orders</li>
-                <li><strong>Availability:</strong> Major cities only</li>
-                <li><strong>Tracking:</strong> Real-time tracking available</li>
-              </ul>
-            </div>
-            
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Bulk Order Shipping</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li><strong>Delivery Time:</strong> 5-10 business days</li>
-                <li><strong>Cost:</strong> Calculated based on weight and distance</li>
-                <li><strong>Minimum Order:</strong> 10kg or above</li>
-                <li><strong>Special Handling:</strong> Dedicated logistics support</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Order Processing Time */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <div className="flex items-center mb-4">
-            <Package className="h-8 w-8 text-green-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900">Order Processing Time</h2>
-          </div>
-          
           <div className="space-y-4">
-            <p className="text-gray-600">
-              Once your order is placed, it goes through the following process:
+            <p className="text-gray-500">
+              We ship to all locations within India using reliable courier services. Standard delivery takes 5-7 business days, while express delivery takes 2-3 business days. Shipping charges vary based on weight, distance, and delivery speed selected.
             </p>
-            <div className="bg-gray-50 rounded-lg p-4">
-              <ol className="list-decimal list-inside space-y-3 text-gray-600">
-                <li>
-                  <strong>Order Confirmation:</strong> Immediate confirmation via email/SMS
-                </li>
-                <li>
-                  <strong>Order Processing:</strong> 12-24 hours for order verification and packaging
-                </li>
-                <li>
-                  <strong>Quality Check:</strong> Products undergo quality inspection before dispatch
-                </li>
-                <li>
-                  <strong>Dispatch:</strong> Orders are handed over to shipping partners
-                </li>
-                <li>
-                  <strong>Transit:</strong> Shipping time depends on selected method and location
-                </li>
-                <li>
-                  <strong>Delivery:</strong> Final delivery at your doorstep
-                </li>
-              </ol>
-            </div>
-            
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Processing Delays</h3>
-              <p className="text-gray-600">
-                Order processing may be delayed during:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600 ml-6">
-                <li>Festive seasons and holidays</li>
-                <li>Natural disasters or weather conditions</li>
-                <li>High order volume periods</li>
-                <li>Product availability issues</li>
-              </ul>
-            </div>
+            <p className="text-gray-500">
+              For metro cities, delivery may be faster due to better connectivity. Remote locations may require additional time for delivery. We provide tracking information for all domestic shipments once dispatched.
+            </p>
+            <p className="text-gray-500">
+              Free shipping is available on orders above specified value thresholds. Standard shipping charges start from ₹50 for domestic orders, with higher rates for express delivery and remote locations.
+            </p>
           </div>
         </div>
 
-        {/* Delivery Time Estimates */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        {/* International Shipping */}
+        <div className="mb-8">
           <div className="flex items-center mb-4">
-            <Clock className="h-8 w-8 text-green-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900">Delivery Time Estimates</h2>
+            <h2 className="text-2xl font-medium text-gray-700">International Shipping</h2>
           </div>
-          
-          <div className="space-y-6">
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-3">By Location</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <h4 className="font-medium text-gray-900 mb-2">Major Cities</h4>
-                  <ul className="space-y-1 text-gray-600">
-                    <li>Kolkata: 2-3 days</li>
-                    <li>Mumbai, Delhi, Bangalore: 3-4 days</li>
-                    <li>Chennai, Hyderabad, Pune: 3-5 days</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 mb-2">Other Areas</h4>
-                  <ul className="space-y-1 text-gray-600">
-                    <li>Tier 2 Cities: 4-6 days</li>
-                    <li>Tier 3 Cities: 5-7 days</li>
-                    <li>Remote Areas: 6-8 days</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Business Days Only</h3>
-              <p className="text-gray-600">
-                Delivery times are calculated in business days (Monday to Saturday, excluding public holidays).
-              </p>
-            </div>
+
+          <div className="space-y-4">
+            <p className="text-gray-500">
+              We offer international shipping to selected countries. International orders typically take 10-15 business days for delivery. Shipping costs are calculated based on destination country, weight, and customs requirements.
+            </p>
+            <p className="text-gray-500">
+              Customers are responsible for any customs duties, taxes, or import fees applicable in their country. These charges are not included in our shipping fees and must be paid directly to customs authorities.
+            </p>
+            <p className="text-gray-500">
+              International shipments require proper documentation including commercial invoice, packing list, and certificates of origin where applicable. We ensure all necessary export documentation is prepared for smooth customs clearance.
+            </p>
           </div>
         </div>
 
-        {/* Order Tracking */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Order Tracking</h2>
-          
+        {/* Processing Time */}
+        <div className="mb-8">
+          <div className="flex items-center mb-4">
+            <h2 className="text-2xl font-medium text-gray-700">Order Processing Time</h2>
+          </div>
+
           <div className="space-y-4">
-            <p className="text-gray-600">
-              Stay updated on your order status with our comprehensive tracking system:
+            <p className="text-gray-500">
+              All orders are processed within 1-2 business days. Processing includes order verification, quality checks, and packaging. You will receive a confirmation email with tracking details once your order ships.
             </p>
-            <div className="bg-gray-50 rounded-lg p-4">
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li><strong>Tracking Number:</strong> Provided once order is dispatched</li>
-                <li><strong>SMS Updates:</strong> Real-time delivery updates via SMS</li>
-                <li><strong>Email Notifications:</strong> Detailed order status emails</li>
-                <li><strong>Website Tracking:</strong> Track order on our website</li>
-                <li><strong>Partner Tracking:</strong> Direct tracking on shipping partner's website</li>
-              </ul>
-            </div>
+            <p className="text-gray-500">
+              During peak seasons or promotional periods, processing time may extend to 3-4 business days. We appreciate your patience during such times and strive to minimize delays.
+            </p>
+            <p className="text-gray-500">
+              Orders placed on weekends or holidays are processed on the next business day. Processing time does not include shipping transit time.
+            </p>
+          </div>
+        </div>
+
+        {/* Shipping Charges */}
+        <div className="mb-8">
+          <div className="flex items-center mb-4">
+            <h2 className="text-2xl font-medium text-gray-700">Shipping Charges</h2>
+          </div>
+
+          <div className="space-y-4">
+            <p className="text-gray-500">
+              Shipping charges are calculated based on order value, weight, and delivery location. We offer free shipping on orders above certain value thresholds. Standard shipping rates start from ₹50 for domestic orders and vary for international shipments.
+            </p>
+            <p className="text-gray-500">
+              Additional charges may apply for special handling requirements, express delivery, or shipments to remote areas. All shipping charges are clearly displayed during checkout before payment confirmation.
+            </p>
+            <p className="text-gray-500">
+              Shipping charges are non-refundable except in cases of incorrect charges applied or order cancellation before dispatch. Partial refunds may be considered for returned orders based on our refund policy.
+            </p>
+          </div>
+        </div>
+
+        {/* Packaging and Handling */}
+        <div className="mb-8">
+          <div className="flex items-center mb-4">
+            <h2 className="text-2xl font-medium text-gray-700">Packaging and Handling</h2>
+          </div>
+
+          <div className="space-y-4">
+            <p className="text-gray-500">
+              All products are carefully packaged to ensure safe transit. We use appropriate packaging materials based on product type, including moisture-proof packaging for dry goods and temperature-controlled packaging where required.
+            </p>
+            <p className="text-gray-500">
+              Fragile items receive special handling with additional protective packaging. Bulk orders may be packaged in larger containers or multiple packages for easier handling and delivery.
+            </p>
+            <p className="text-gray-500">
+              We follow food safety and hygiene standards for all edible products. Packaging materials are food-grade and comply with regulatory requirements for food products.
+            </p>
           </div>
         </div>
 
         {/* Delivery Instructions */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Delivery Instructions</h2>
-          
+        <div className="mb-8">
+          <div className="flex items-center mb-4">
+            <h2 className="text-2xl font-medium text-gray-700">Delivery Instructions</h2>
+          </div>
+
           <div className="space-y-4">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Please Provide:</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Complete and accurate address with landmark</li>
-                <li>Mobile number for delivery coordination</li>
-                <li>Preferred delivery time (if available)</li>
-                <li>Special instructions for gated communities</li>
-              </ul>
-            </div>
-            
-            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Delivery Guidelines:</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Someone must be available to receive the delivery</li>
-                <li>Check package condition before accepting</li>
-                <li>Report any damage immediately to customer support</li>
-                <li>Provide OTP if required by delivery partner</li>
-              </ul>
-            </div>
+            <p className="text-gray-500">
+              Please provide complete and accurate delivery address including landmark, contact person name, and mobile number. Someone must be available at the delivery address to receive the package.
+            </p>
+            <p className="text-gray-500">
+              For office or commercial deliveries, please provide specific timing requirements and contact person details. Delivery partners may call before arrival to confirm availability.
+            </p>
+            <p className="text-gray-500">
+              Special delivery instructions like "leave with neighbor" or "leave at reception" should be clearly mentioned during order placement. However, we cannot guarantee compliance with all special requests.
+            </p>
           </div>
         </div>
 
-        {/* Failed Delivery */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        {/* Order Tracking */}
+        <div className="mb-8">
           <div className="flex items-center mb-4">
-            <AlertCircle className="h-8 w-8 text-orange-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900">Failed Delivery Attempts</h2>
+            <h2 className="text-2xl font-medium text-gray-700">Order Tracking</h2>
           </div>
-          
+
           <div className="space-y-4">
-            <p className="text-gray-600">
-              In case delivery attempts fail:
+            <p className="text-gray-500">
+              Once your order ships, you will receive a tracking number via email. You can track your order status on our website or directly on the courier's website. We recommend checking tracking regularly for delivery updates.
             </p>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li><strong>First Attempt:</strong> Delivery partner will attempt redelivery next day</li>
-                <li><strong>Second Attempt:</strong> Package will be held at local hub for 3 days</li>
-                <li><strong>Third Attempt:</strong> Package will be returned to our warehouse</li>
-                <li><strong>Customer Responsibility:</strong> Additional charges may apply for re-delivery</li>
-              </ul>
-            </div>
+            <p className="text-gray-500">
+              Tracking information may take 24-48 hours to update after dispatch. International shipments may have limited tracking information once the package leaves the origin country.
+            </p>
+            <p className="text-gray-500">
+              For any tracking issues or delivery concerns, please contact our customer service with your order number and tracking details for prompt assistance.
+            </p>
+          </div>
+        </div>
+
+        {/* Delivery Issues */}
+        <div className="mb-8">
+          <div className="flex items-center mb-4">
+            <h2 className="text-2xl font-medium text-gray-700">Delivery Issues</h2>
+          </div>
+
+          <div className="space-y-4">
+            <p className="text-gray-500">
+              In case of delivery issues such as delays, damaged packages, or lost shipments, please contact our customer service immediately at dey.Surajit.Kolkata@gmail.com or call +916290984501. We will work with our shipping partners to resolve the issue promptly.
+            </p>
+            <p className="text-gray-500">
+              For damaged packages, please refuse delivery and contact us immediately with photos of the damage. We will arrange for replacement or refund as per our policy.
+            </p>
+            <p className="text-gray-500">
+              Lost shipments are investigated with shipping partners and may take 7-10 business days to resolve. We will keep you informed throughout the investigation process.
+            </p>
+          </div>
+        </div>
+
+        {/* Returns and Exchanges */}
+        <div className="mb-8">
+          <div className="flex items-center mb-4">
+            <h2 className="text-2xl font-medium text-gray-700">Returns and Exchanges</h2>
+          </div>
+
+          <div className="space-y-4">
+            <p className="text-gray-500">
+              Returns and exchanges are governed by our refund policy. Please review the refund policy for detailed information about return eligibility, timeframes, and procedures.
+            </p>
+            <p className="text-gray-500">
+              Return shipping costs are generally borne by the customer unless the return is due to our error or product defect. We recommend using insured shipping for return packages.
+            </p>
+            <p className="text-gray-500">
+              All returns must be in original packaging with all labels and tags intact. Processed returns typically take 5-7 business days for refund or exchange completion.
+            </p>
           </div>
         </div>
 
         {/* Special Conditions */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Special Conditions</h2>
-          
+        <div className="mb-8">
+          <div className="flex items-center mb-4">
+            <h2 className="text-2xl font-medium text-gray-700">Special Conditions</h2>
+          </div>
+
           <div className="space-y-4">
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Weather Conditions</h3>
-              <p className="text-gray-600">
-                Delivery may be delayed during extreme weather conditions. We prioritize product safety over delivery speed.
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Force Majeure</h3>
-              <p className="text-gray-600">
-                We are not liable for delays caused by circumstances beyond our control, including natural disasters, strikes, or government restrictions.
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Product Specific Requirements</h3>
-              <p className="text-gray-600">
-                Some products may require special handling or packaging, which may affect delivery times.
-              </p>
-            </div>
+            <p className="text-gray-500">
+              Delivery may be delayed during extreme weather conditions, natural disasters, or unforeseen circumstances. We prioritize product safety over delivery speed in such situations.
+            </p>
+            <p className="text-gray-500">
+              We are not liable for delays caused by circumstances beyond our control, including strikes, government restrictions, or customs delays for international shipments.
+            </p>
+            <p className="text-gray-500">
+              Some products may have specific shipping requirements due to their nature. We will inform you of any special shipping conditions for such products at the time of order.
+            </p>
           </div>
         </div>
 
-        {/* Contact Information */}
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <div className="flex items-center mb-4">
-            <CheckCircle className="h-8 w-8 text-green-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900">Shipping Support</h2>
-          </div>
-          <div className="space-y-4">
-            <p className="text-gray-600">
-              For any shipping or delivery related queries, please contact our support team:
-            </p>
-            <div className="bg-gray-50 rounded-lg p-4">
-              <p className="text-gray-700"><strong>MAHASHAKTI AGRO PRODUCTS PVT LTD</strong></p>
-              <p className="text-gray-600">Shipping Support: +916290984501</p>
-              <p className="text-gray-600">Email: dey.Surajit.Kolkata@gmail.com</p>
-              <p className="text-gray-600">Office No. 1B, Annex Building 2, B.T.M. Sarani, Kolkata - 700001</p>
-              <p className="text-gray-600">Support Hours: 9:00 AM - 6:00 PM (Monday to Saturday)</p>
-            </div>
-            
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Quick Tips:</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Track your order regularly for updates</li>
-                <li>Keep your phone available during delivery hours</li>
-                <li>Inspect package before accepting delivery</li>
-                <li>Contact us immediately for any delivery issues</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        
+
+      
+
+
       </div>
     </div>
   );
 }
+

@@ -27,6 +27,24 @@ export default function Footer() {
             </p>
             
             {/* Contact Details */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <MapPin className="h-4 w-4 text-red-200" />
+                <span className="text-red-100 text-sm">Office No. 1B, Annex Building 2, B.T.M. Sarani, Kolkata - 700001</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="h-4 w-4 text-red-200" />
+                <a href="mailto:dey.Surajit.Kolkata@gmail.com" className="text-red-100 text-sm hover:text-white transition-colors">
+                  dey.Surajit.Kolkata@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-red-200" />
+                <a href="tel:+916290984501" className="text-red-100 text-sm hover:text-white transition-colors">
+                  +916290984501
+                </a>
+              </div>
+            </div>
            
           </div>
 <div className="flex justify-between items-start gap-10 w-[40%]">
@@ -34,10 +52,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">OUR STORES</h3>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/categories" className="text-red-100 hover:text-white">All Categories</Link></li>
-              <li><Link href="/products/besan" className="text-red-100 hover:text-white">Besan</Link></li>
-              <li><Link href="/products/makhana" className="text-red-100 hover:text-white">Makhana</Link></li>
-              <li><Link href="/products/mustard-oil" className="text-red-100 hover:text-white">Mustard Oil</Link></li>
+              <li><Link href="/shop" className="text-red-100 hover:text-white">All Categories</Link></li>
+              <li><Link href="/shop?category=besan" className="text-red-100 hover:text-white">Besan</Link></li>
+              <li><Link href="/shop?category=makhana" className="text-red-100 hover:text-white">Makhana</Link></li>
+              <li><Link href="/shop?category=mustard-oil" className="text-red-100 hover:text-white">Mustard Oil</Link></li>
             </ul>
           </div>
 
