@@ -1,7 +1,52 @@
-'use client';
-
 import Image from 'next/image';
 import { Globe, CheckCircle, Target, Award } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "About Us - MAHASHAKTI AGRO PRODUCTS PVT. LTD. | Global Agro Products Supplier",
+  description: "Learn about MAHASHAKTI AGRO PRODUCTS PVT. LTD. - Leading manufacturer, supplier, importer and exporter of premium quality agro products including besan, makhana, mustard oil, and cashews. Serving global markets from Kolkata, India.",
+  keywords: ["about MAHASHAKTI", "agro products manufacturer", "besan supplier", "makhana exporter", "mustard oil importer", "cashews supplier", "Kolkata agro products", "global agro trade", "MAHASHAKTI AGRO PRODUCTS"],
+  authors: [{ name: "MAHASHAKTI AGRO PRODUCTS PVT. LTD." }],
+  creator: "MAHASHAKTI AGRO PRODUCTS PVT. LTD.",
+  publisher: "MAHASHAKTI AGRO PRODUCTS PVT. LTD.",
+  openGraph: {
+    title: "About Us - MAHASHAKTI AGRO PRODUCTS PVT. LTD.",
+    description: "Leading manufacturer, supplier, importer and exporter of premium quality agro products. Serving global markets from Kolkata, India.",
+    url: "https://mahashaktiagroproductspvtltd.in/about",
+    siteName: "MAHASHAKTI AGRO PRODUCTS PVT. LTD.",
+    images: [
+      {
+        url: "/gallery/WhatsApp-Image-2026-01-20-at-3.15.07-PM-1.png",
+        width: 800,
+        height: 600,
+        alt: "MAHASHAKTI AGRO PRODUCTS - About Us",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us - MAHASHAKTI AGRO PRODUCTS PVT. LTD.",
+    description: "Leading manufacturer, supplier, importer and exporter of premium quality agro products. Serving global markets from Kolkata, India.",
+    images: ["/gallery/WhatsApp-Image-2026-01-20-at-3.15.07-PM-1.png"],
+    creator: "@mahashaktiagro",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://mahashaktiagroproductspvtltd.in/about",
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -48,7 +93,7 @@ export default function AboutPage() {
             {/* Right Image - Fixed Position */}
             <div className="lg:w-1/2 relative h-96 overflow-hidden  lg:sticky lg:top-20">
               <Image
-                src="/gallery/WhatsApp-Image-2026-01-20-at-3.15.07-PM-1.jpeg"
+                src="/gallery/WhatsApp-Image-2026-01-20-at-3.15.07-PM-1.png"
                 alt="Mahashakti Agro Products"
                 fill
                 className="object-cover"
