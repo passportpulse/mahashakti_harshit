@@ -13,33 +13,33 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    filename: "WhatsApp-Image-2026-01-20-at-3.15.07-PM-1.jpeg",
+    filename: "WhatsApp-Image-2026-01-20-at-3.15.07-PM-1.png",
     title: "Agro Product 1",
     description: "Premium quality agro products from Mahashakti"
   },
   {
     id: 2,
-    filename: "WhatsApp-Image-2026-01-20-at-3.15.07-PM.jpeg",
+    filename: "WhatsApp-Image-2026-01-20-at-3.15.07-PM.png",
     title: "Agro Product 2",
     description: "Fresh and natural agro products"
   },
   {
     id: 3,
-    filename: "WhatsApp-Image-2026-01-20-at-3.15.08-PM-1.jpeg",
+    filename: "WhatsApp-Image-2026-01-20-at-3.15.08-PM-1.png",
     title: "Agro Product 3",
     description: "High-quality food products"
   },
  
   {
     id: 4,
-    filename: "WhatsApp-Image-2026-01-20-at-3.15.08-PM.jpeg",
+    filename: "WhatsApp-Image-2026-01-20-at-3.15.08-PM.png",
     title: "Agro Product 5",
     description: "Quality assurance in production"
   },
   
   {
     id: 5,
-    filename: "WhatsApp-Image-2026-01-20-at-3.15.09-PM-2.jpeg",
+    filename: "WhatsApp-Image-2026-01-20-at-3.15.09-PM-2.png",
     title: "Agro Product 7",
     description: "Final product ready for export"
   },
@@ -57,7 +57,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 8,
-    filename: "WhatsApp-Image-2026-01-20-at-3.15.09-PM.jpeg",
+    filename: "WhatsApp-Image-2026-01-20-at-3.15.09-PM.png",
     title: "Agro Product 8",
     description: "International standard packaging"
   }

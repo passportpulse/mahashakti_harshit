@@ -198,8 +198,8 @@ export default function ProductGridSection() {
   );
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 relative overflow-hidden bg-gray-50" style={{ backgroundImage: 'url(/bg2.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className=" mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-700 mb-4">

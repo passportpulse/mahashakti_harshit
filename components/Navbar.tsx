@@ -104,42 +104,7 @@ export default function Navbar() {
 
           {/* Icons */}
           <div className="flex items-center space-x-4">
-            <Link href="/account" className="text-gray-600 hover:text-green-600 transition-colors">
-              <User className="h-6 w-6" />
-            </Link>
-            <Link href="/wishlist" className="text-gray-600 hover:text-green-600 transition-colors relative">
-              <Heart className="h-6 w-6" />
-              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                0
-              </span>
-            </Link>
-            <Link href="/cart" className="text-gray-600 hover:text-green-600 transition-colors relative">
-              <ShoppingCart className="h-6 w-6" />
-              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                0
-              </span>
-            </Link>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="lg:hidden text-gray-600 hover:text-green-600 transition-colors"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Navigation - Sticky on Scroll */}
-      <div
-        className={`hidden md:block bg-white transition-all duration-300 ${
-          isSticky
-            ? 'fixed top-0 left-0 w-full shadow-lg z-50'
-            : ''
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between">
+     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between">
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/" className="text-gray-500 hover:text-green-600 transition-colors font-medium relative group">
               Home
@@ -165,7 +130,18 @@ export default function Navbar() {
           
      
         </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden text-gray-600 hover:text-green-600 transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
       </div>
+
 
       {/* Mobile Menu */}
       {isMenuOpen && (

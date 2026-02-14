@@ -6,6 +6,7 @@ import ProductDisplaySection from "@/components/ProductDisplaySection";
 import PartnerWithUsSection from "@/components/PartnerWithUsSection";
 import ProductGridSection from "@/components/ProductGridSection";
 import CTASection from "@/components/CTASection";
+import GallerySection from "@/components/GallerySection";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
 
       {/* Popular Categories Section */}
       <PopularCategories />
+
+      {/* Gallery Section */}
+      <GallerySection />
 
       {/* CTA Section */}
       <CTASection />

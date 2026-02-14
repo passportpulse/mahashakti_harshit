@@ -246,15 +246,16 @@ export default function ProductDetailPage() {
               <div className="mb-4">
                 {renderStars()}
               </div>
-
+ <h3 className="text-lg font-semibold text-gray-900 mb-4">Product Description</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">{product.description}</p>
               {/* Price */}
-              <div className="flex items-center space-x-3 mb-6">
+              {/* <div className="flex items-center space-x-3 mb-6">
                 <span className="text-3xl font-bold text-gray-900">₹299</span>
                 <span className="text-xl text-gray-500 line-through">₹399</span>
                 <span className="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-semibold">
                   -25%
                 </span>
-              </div>
+              </div> */}
 
               {/* Stock Status */}
               <div className="flex items-center space-x-2 mb-6">
@@ -272,20 +273,20 @@ export default function ProductDetailPage() {
               </div>
 
               {/* Quantity and Actions */}
-              <div className="flex items-center space-x-4 mb-6">
+              <div className="flex text-gray-500 items-center space-x-4 mb-6">
                 <div className="flex items-center border border-gray-300 rounded-lg">
                   <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="p-3 hover:bg-gray-50"
+                    className="p-3 text-gray-500 hover:bg-gray-50"
                   >
-                    <Minus className="h-4 w-4" />
+                    <Minus className="h-4 w-4 text-gray-500" />
                   </button>
-                  <span className="px-4 py-3 font-medium">{quantity}</span>
+                  <span className="px-4 py-3 font-medium text-gray-500">{quantity}</span>
                   <button
                     onClick={() => setQuantity(quantity + 1)}
-                    className="p-3 hover:bg-gray-50"
+                    className="p-3 text-gray-500 hover:bg-gray-50"
                   >
-                    <Plus className="h-4 w-4" />
+                    <Plus className="h-4 w-4 text-gray-500" />
                   </button>
                 </div>
 
