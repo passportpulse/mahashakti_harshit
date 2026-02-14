@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { 
   Search, 
   ShoppingCart, 
@@ -18,11 +19,22 @@ import {
 import productsData from "@/data/products.json";
 
 export default function ShopPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get('category');
+  const [selectedCategory, setSelectedCategory] = useState(categoryParam || 'all');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [cartItems, setCartItems] = useState<number[]>([]);
   const [likedItems, setLikedItems] = useState<number[]>([]);
+
+  // Update selected category when URL parameter changes
+  useEffect(() => {
+    if (categoryParam) {
+      setSelectedCategory(categoryParam);
+    } else {
+      setSelectedCategory('all');
+    }
+  }, [categoryParam]);
 
   // Filter products based on category and search
   const getFilteredProducts = () => {
@@ -88,8 +100,8 @@ export default function ShopPage() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
             {/* Categories */}
             <div className="flex flex-wrap gap-3">
-              <button
-                onClick={() => setSelectedCategory('all')}
+              <Link
+                href="/shop"
                 className={`px-4 py-2 rounded-full transition-colors ${
                   selectedCategory === 'all'
                     ? 'bg-green-600 text-white'
@@ -97,11 +109,11 @@ export default function ShopPage() {
                 }`}
               >
                 All Products
-              </button>
+              </Link>
               {productsData.categories.map((category) => (
-                <button
+                <Link
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.slug)}
+                  href={`/shop?category=${category.slug}`}
                   className={`px-4 py-2 rounded-full transition-colors ${
                     selectedCategory === category.slug
                       ? 'bg-green-600 text-white'
@@ -109,7 +121,7 @@ export default function ShopPage() {
                   }`}
                 >
                   {category.name}
-                </button>
+                </Link>
               ))}
             </div>
 

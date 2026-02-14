@@ -22,7 +22,7 @@ const categories: Category[] = [
     description: "Protein-rich, roasted and flavored makhana perfect for healthy snacking.",
     image: "/categories/makhana.jpeg",
     bgColor: "from-green-600 to-emerald-500",
-    link: "/products/makhana"
+    link: "/shop?category=makhana"
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const categories: Category[] = [
     description: "Pure, chemical-free mustard oil extracted using traditional methods.",
     image: "/categories/mustard-oil.jpeg",
     bgColor: "from-yellow-500 to-orange-500",
-    link: "/products/mustard-oil"
+    link: "/shop?category=mustard-oil"
   },
   {
     id: 3,
@@ -40,16 +40,16 @@ const categories: Category[] = [
     description: "Handpicked premium dry fruits packed with natural nutrients and freshness.",
     image: "/categories/dry-fruits.jpeg",
     bgColor: "from-orange-500 to-red-500",
-    link: "/products/dry-fruits"
+    link: "/shop?category=dry-fruits"
   },
   {
     id: 4,
-    name: "Aata",
-    title: "Fresh Chakki Aata",
-    description: "Stone-ground whole wheat flour for soft, healthy and delicious rotis.",
+    name: "Besan",
+    title: "Premium Gram Flour",
+    description: "Stone-ground premium quality besan for all your cooking needs.",
     image: "/categories/aata.png",
     bgColor: "from-amber-500 to-yellow-600",
-    link: "/products/aata"
+    link: "/shop?category=besan"
   }
 ];
 
