@@ -17,6 +17,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "E-Commerce Store",
   description: "Your trusted online shopping destination for quality products at great prices.",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/MM-2D-PNG.png', sizes: '32x32', type: 'image/png' },
+      { url: '/MM-2D-PNG.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: { url: '/MM-2D-PNG.png', sizes: '180x180', type: 'image/png' },
+  },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
