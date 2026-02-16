@@ -8,10 +8,7 @@ import {
   Home,
   Headphones,
   Rocket,
-  CheckCircle,
-  Phone,
-  Mail,
-  Globe
+
 } from 'lucide-react';
 
 export default function PartnerWithUsSection() {

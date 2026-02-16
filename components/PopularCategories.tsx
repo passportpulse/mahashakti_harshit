@@ -45,7 +45,7 @@ const categories: Category[] = [
   {
     id: 4,
     name: "Besan",
-    title: "Premium Gram Flour",
+    title: "Premium  Flour",
     description: "Stone-ground premium quality besan for all your cooking needs.",
     image: "/categories/aata.png",
     bgColor: "from-amber-500 to-yellow-600",

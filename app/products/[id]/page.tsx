@@ -28,6 +28,7 @@ interface Product {
   description: string;
   unit: string;
   image: string;
+  weight: number[];
   features: string[];
   inStock: boolean;
 }
@@ -240,7 +241,15 @@ export default function ProductDetailPage() {
             {/* Product Info */}
             <div>
               <div className="text-sm text-gray-500 mb-2">{product.category}</div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h1>
+              <div className="text-lg text-gray-600 mb-4">
+                {product.weight.map((w, index) => (
+                  <span key={index}>
+                    {w} {product.unit}
+                    {index < product.weight.length - 1 && ', '}
+                  </span>
+                ))}
+              </div>
               
               {/* Rating */}
               <div className="mb-4">
@@ -256,6 +265,7 @@ export default function ProductDetailPage() {
                   -25%
                 </span>
               </div> */}
+              
 
               {/* Stock Status */}
               <div className="flex items-center space-x-2 mb-6">
@@ -270,6 +280,17 @@ export default function ProductDetailPage() {
                     <span className="text-red-600 font-medium">Out of Stock</span>
                   </>
                 )}
+              </div>
+   <div className="border-t py-6">
+                <h3 className="font-semibold text-gray-900 mb-3">Key Features</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  {product.features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-2">
+                      <Check className="h-4 w-4 text-green-600 flex-shrink-0" />
+                      <span className="text-sm text-gray-600">{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Quantity and Actions */}
@@ -312,35 +333,8 @@ export default function ProductDetailPage() {
               </div>
 
               {/* Product Features */}
-              <div className="border-t pt-6">
-                <h3 className="font-semibold text-gray-900 mb-3">Key Features</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {product.features.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <Check className="h-4 w-4 text-green-600 flex-shrink-0" />
-                      <span className="text-sm text-gray-600">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Additional Info */}
-              <div className="border-t pt-6 mt-6">
-                <div className="grid grid-cols-3 gap-4 text-sm">
-                  <div>
-                    <span className="text-gray-500">Weight:</span>
-                    <span className="ml-2 font-medium">1 {product.unit}</span>
-                  </div>
-                  <div>
-                    <span className="text-gray-500">Shelf Life:</span>
-                    <span className="ml-2 font-medium">6 months</span>
-                  </div>
-                  <div>
-                    <span className="text-gray-500">Category:</span>
-                    <span className="ml-2 font-medium">{product.category}</span>
-                  </div>
-                </div>
-              </div>
+           
+           
             </div>
 
             {/* Trust Badges */}
