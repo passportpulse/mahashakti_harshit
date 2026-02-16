@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { 
@@ -28,6 +28,7 @@ interface Product {
   description: string;
   unit: string;
   image: string;
+  images: string[];
   weight: number[];
   features: string[];
   inStock: boolean;
@@ -57,8 +58,25 @@ export default function ProductDetailPage() {
   });
   const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const product = productsData.categories.flatMap((category) => category.products).find((product) => product.id === productId) as Product | undefined;
+
+  // Auto-rotate images every 5 seconds
+  useEffect(() => {
+    if (!product || !product.images || product.images.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % product.images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [product]);
+
+  // Handle thumbnail click
+  const handleThumbnailClick = (index: number) => {
+    setCurrentImageIndex(index);
+  };
 
   if (!product) {
     return (
@@ -171,7 +189,7 @@ export default function ProductDetailPage() {
                   onMouseLeave={handleMouseLeave}
                 >
                   <img 
-                    src={product.image} 
+                    src={product.images[currentImageIndex] || product.image} 
                     alt={product.name}
                     className="w-full h-full object-contain"
                     onError={(e) => {
@@ -201,7 +219,7 @@ export default function ProductDetailPage() {
               <div className="bg-white rounded-lg shadow-md p-2">
                 <div className="aspect-square overflow-hidden rounded">
                   <img 
-                    src={product.image} 
+                    src={product.images[currentImageIndex] || product.image} 
                     alt={product.name}
                     className="w-full h-full object-cover"
                     style={{
@@ -219,12 +237,18 @@ export default function ProductDetailPage() {
             
             {/* Thumbnail Images */}
             <div className="grid grid-cols-4 gap-2">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="bg-white rounded-lg shadow-md p-2 cursor-pointer hover:ring-2 hover:ring-green-500">
+              {product.images.map((img, index) => (
+                <div 
+                  key={index} 
+                  className={`bg-white rounded-lg shadow-md p-2 cursor-pointer transition-all ${
+                    currentImageIndex === index ? 'ring-2 ring-green-500' : 'hover:ring-2 hover:ring-green-300'
+                  }`}
+                  onClick={() => handleThumbnailClick(index)}
+                >
                   <div className="aspect-square bg-gray-200 rounded flex items-center justify-center overflow-hidden">
                     <img 
-                      src={product.image} 
-                      alt={`${product.name} ${i}`}
+                      src={img} 
+                      alt={`${product.name} ${index + 1}`}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         e.currentTarget.src = '/api/placeholder/100/100';
@@ -242,14 +266,7 @@ export default function ProductDetailPage() {
             <div>
               <div className="text-sm text-gray-500 mb-2">{product.category}</div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h1>
-              <div className="text-lg text-gray-600 mb-4">
-                {product.weight.map((w, index) => (
-                  <span key={index}>
-                    {w} {product.unit}
-                    {index < product.weight.length - 1 && ', '}
-                  </span>
-                ))}
-              </div>
+            
               
               {/* Rating */}
               <div className="mb-4">
@@ -257,6 +274,16 @@ export default function ProductDetailPage() {
               </div>
  <h3 className="text-lg font-semibold text-gray-900 mb-4">Product Description</h3>
                   <p className="text-gray-600 leading-relaxed mb-4">{product.description}</p>
+                  
+<h3 className="text-lg font-semibold text-gray-900 mb-4">Available Sizes</h3>
+                    <div className="text-lg text-gray-600 mb-4">
+                {product.weight.map((w, index) => (
+                  <span key={index}>
+                    {w} {product.unit}
+                    {index < product.weight.length - 1 && ', '}
+                  </span>
+                ))}
+              </div>
               {/* Price */}
               {/* <div className="flex items-center space-x-3 mb-6">
                 <span className="text-3xl font-bold text-gray-900">₹299</span>
