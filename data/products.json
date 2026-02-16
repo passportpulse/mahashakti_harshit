@@ -2,16 +2,16 @@
   "categories": [
     {
       "id": 1,
-      "name": "Besan",
-      "slug": "besan",
-      "description": "Premium quality gram flour for all your cooking needs",
-      "image": "/categories/besan.jpeg",
+      "name": "Flour",
+      "slug": "flour",
+      "description": "Premium quality flours for all your cooking needs",
+      "image": "/categories/flour.png",
       "products": [
         {
           "id": 1,
           "name": "MAPL Premium Besan | High Quality Gram Flour for Cooking & Sweets",
           "slug": "mapl-premium-besan",
-          "category": "Besan",
+          "category": "Flour",
           "description": "MAPL Premium Besan (Gram Flour) is a finely milled, high-quality flour made from carefully selected chana dal to ensure superior taste, texture, and purity. Processed under strict quality control and hygienic conditions by Mahashakti Agro Products Pvt. Ltd., our besan delivers consistent freshness and rich aroma in every pack. Ideal for traditional Indian dishes like pakoras, sweets, kadhi, and savory snacks, MAPL Besan is rich in protein, gluten-free, and packed with natural nutrients. Suitable for household kitchens, restaurants, and bulk commercial use, it is available in secure packaging to maintain long-lasting freshness and quality.",
           "unit": "kg",
           "image": "/products/premium-besan.png",
@@ -24,20 +24,12 @@
             "No Additives"
           ],
           "inStock": true
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Aata",
-      "slug": "aata",
-      "description": "Premium quality wheat flour for all your cooking needs",
-      "image": "/categories/aata.png",
-      "products": [
+        },
         {
           "id": 9,
           "name": "MAPL Premium Aata | High Quality Wheat Flour for Daily Cooking",
           "slug": "mapl-premium-aata",
+          "category": "Flour",
           "description": "MAPL Premium Aata is a finely milled, high-quality wheat flour made from carefully selected wheat grains to ensure superior taste, texture, and purity. Processed under strict quality control and hygienic conditions by Mahashakti Agro Products Pvt. Ltd., our aata delivers consistent freshness and rich aroma in every pack. Ideal for traditional Indian breads like roti, chapati, paratha, and puri, MAPL Aata is rich in fiber, protein, and essential nutrients. Suitable for household kitchens, restaurants, and bulk commercial use, it is available in secure packaging to maintain long-lasting freshness and quality.",
           "unit": "kg",
           "image": "/products/aata.png",

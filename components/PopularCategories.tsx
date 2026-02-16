@@ -49,7 +49,7 @@ const categories: Category[] = [
     description: "Stone-ground premium quality besan for all your cooking needs.",
     image: "/categories/aata.png",
     bgColor: "from-amber-500 to-yellow-600",
-    link: "/shop?category=besan"
+    link: "/shop?category=flour"
   }
 ];
 
