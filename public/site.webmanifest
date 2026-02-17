@@ -1,0 +1,41 @@
+{
+  "name": "Mahashakti Agro Products",
+  "short_name": "MAPL",
+  "description": "Premium quality agro products for healthy living",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16a34a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "shopping", "food"],
+  "icons": [
+    {
+      "src": "/MM-2D-PNG.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/MM-2D-PNG.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Shop",
+      "short_name": "Shop",
+      "description": "Browse our premium products",
+      "url": "/shop",
+      "icons": [
+        {
+          "src": "/MM-2D-PNG.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

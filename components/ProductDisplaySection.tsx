@@ -47,12 +47,13 @@ const getAllProducts = (): Product[] => {
 // Function to categorize products as requested
 const getProductCategory = (productName: string): 'discounts' | 'new' | 'topsellers' => {
   if (productName.includes('MAPL Premium Besan') || 
-      productName.includes('MAPL Dry Dates') || 
+      productName.includes('MAPL Dry Dates') ||      
+      productName.includes('MAPL Flavored Cashews') ||
       productName.includes('MAPL Premium Cashews')) {
     return 'discounts';
   }
   if (productName.includes('MAPL Kachchi Ghani Mustard Oil') || 
-      productName.includes('MAPL Pure Mustard Oil') ||
+      productName.includes('MAPL Pure Mustard Oil') ||  productName.includes('MAPL Mustard Oil Pouch Pack ') ||
       productName.includes('MAPL Roasted Makhana | High Protein')) {
     return 'new';
   }

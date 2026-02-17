@@ -85,6 +85,46 @@
             "Rich in Nutrients"
           ],
           "inStock": true
+        },
+        {
+          "id": 10,
+          "name": "MAPL Premium Almonds | California Almonds | High Quality Dry Fruits",
+          "slug": "mapl-premium-almonds",
+          "description": "MAPL Premium Almonds are carefully selected and processed to deliver superior quality, rich taste, and exceptional nutritional benefits. Sourced from the finest California almond farms and hygienically packed by Mahashakti Agro Products Pvt. Ltd., these premium almonds deliver unmatched quality, authentic flavor, and wholesome health benefits in every nut. Our almonds are naturally rich in healthy fats, protein, fiber, vitamin E, magnesium, and antioxidants that support heart health, brain function, and overall wellness. MAPL Premium Almonds are perfect for daily consumption as a healthy snack, breakfast cereals, baking, desserts, smoothies, and traditional Indian recipes. Ideal for health-conscious individuals, fitness enthusiasts, and families looking for nutrient-dense superfoods. MAPL ensures consistent quality, farm-fresh goodness, and authentic taste in every pack.",
+          "unit": "kg",
+          "image": "/products/dates.png",
+          "images": ["/products/dates.png", "/products/dates.png"],
+          "weight": [0.25, 0.5, 1],
+          "features": [
+            "California Premium Quality",
+            "Rich in Vitamin E",
+            "High in Healthy Fats",
+            "Excellent Source of Protein",
+            "Heart Healthy",
+            "No Preservatives",
+            "Perfect for Daily Snacking"
+          ],
+          "inStock": true
+        },
+        {
+          "id": 12,
+          "name": "MAPL Flavored Cashews | Premium Quality Masala Cashew Nuts",
+          "slug": "mapl-flavored-cashews",
+          "description": "MAPL Flavored Cashews are premium-quality cashew nuts expertly seasoned with authentic Indian spices and flavors to deliver an irresistible taste experience. Carefully selected from the finest cashew farms and processed with traditional recipes by Mahashakti Agro Products Pvt. Ltd., these flavored cashews offer the perfect balance of crunch, spice, and natural sweetness. Our cashews are coated with carefully blended masala flavors that enhance the natural nutty taste while providing a delightful snacking experience. MAPL Flavored Cashews are ideal for festive occasions, tea-time snacks, party treats, and gourmet gifting. Perfect for customers who love spicy snacks, traditional Indian flavors, and premium quality dry fruits. MAPL ensures consistent quality, authentic taste, and hygienic packaging in every pack.",
+          "unit": "kg",
+          "image": "/products/flavor-per-cashew.png",
+          "images": ["/products/flavor-per-cashew.png", "/products/flavor-per-cashew-2.png"],
+          "weight": [0.25, 0.5, 1],
+          "features": [
+            "Authentic Indian Masala Flavor",
+            "Premium Quality Cashews",
+            "Perfectly Seasoned",
+            "Crunchy Texture",
+            "No Artificial Preservatives",
+            "Traditional Spice Blend",
+            "Perfect for Festive Occasions"
+          ],
+          "inStock": true
         }
       ]
     },
@@ -186,6 +226,26 @@
             "Natural Source",
             "Healthy Cooking",
             "Quality Assured"
+          ],
+          "inStock": true
+        },
+        {
+          "id": 11,
+          "name": "MAPL Mustard Oil Pouch Pack | 1kg Premium Quality Cooking Oil",
+          "slug": "mapl-mustard-oil-pouch",
+          "description": "MAPL Mustard Oil Pouch Pack is a premium-quality, 100% pure and natural mustard oil, conveniently packaged in a 1kg pouch for everyday household use. Carefully processed from high-grade mustard seeds by Mahashakti Agro Products Pvt. Ltd., this oil retains its traditional pungency, rich aroma, and nutritional benefits. The pouch packaging ensures easy handling, storage, and pouring convenience while maintaining freshness and preventing spills. This cholesterol-free mustard oil is rich in natural antioxidants and essential fatty acids, making it a healthy choice for daily cooking, frying, sautéing, and traditional Indian recipes. MAPL Mustard Oil Pouch Pack is ideal for small to medium-sized families looking for premium quality cooking oil in convenient packaging.",
+          "unit": "liter",
+          "image": "/products/pouch-oil.png",
+          "images": ["/products/pouch-oil.png", "/products/pouch-oil-2.png"],
+          "weight": [1],
+          "features": [
+            "Convenient 1kg Pouch Pack",
+            "100% Pure & Natural",
+            "No Cholesterol",
+            "Easy to Store & Pour",
+            "Premium Quality Mustard Seeds",
+            "Traditional Cold Pressed",
+            "Perfect for Family Use"
           ],
           "inStock": true
         }
